@@ -1,4 +1,16 @@
 {
+	"vintage_start_in_command_mode": true,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "drawWhiteSpace": true,
+  "matchBracketsAngle": true,
+  "matchBracketsBraces": true,
+  "matchBracketsSquare": true,
+  "rulers": [ 80 ],
+  "show_minimap": false,
+  "trim_trailing_white_space_on_save": true,
+  "highlight_modified_tabs": true,
+
 	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
 	"font_size": 12.0,
 	"theme": "Soda Dark.sublime-theme"
