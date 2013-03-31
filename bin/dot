@@ -8,8 +8,11 @@
 # Set OS X defaults
 $ZSH/osx/set-defaults.sh
 
-# Upgrade homebrew
+# Make sure we’re using the latest Homebrew
 brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
 
 # Install homebrew packages
 $ZSH/homebrew/install.sh 2>&1
