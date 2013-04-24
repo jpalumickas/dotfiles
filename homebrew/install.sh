@@ -23,6 +23,7 @@ brew install wget --enable-iri
 brew install grc
 brew install spark
 brew install git
+brew install hub
 
 # Remove outdated versions from the cellar
 brew cleanup
