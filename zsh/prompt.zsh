@@ -59,13 +59,23 @@ rb_prompt(){
   fi
 }
 
+function _todo_number() {
+  todos=$(echo $(find ~/Desktop -maxdepth 1 -type f -name '*.todo' | wc -l))
+  if [ $todos != 0 ]
+  then
+    echo "TODO: $todos"
+  else
+    echo ""
+  fi
+}
+
 directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
 export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
+  export RPROMPT="%{$fg_bold[cyan]%}$(_todo_number)%{$reset_color%}"
 }
 
 precmd() {
