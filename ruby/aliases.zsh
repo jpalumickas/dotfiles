@@ -1,3 +1,3 @@
-alias r='rbenv local 1.9.3-p392'
+alias r='rbenv local 2.0.0-p0'
 
 alias migrate='rake db:migrate db:test:clone'
