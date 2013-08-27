@@ -1,4 +1,4 @@
-# Pipe my public key to my clipboard. Fuck you, pay me.
+# Pipe my public key to my clipboard.
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
 # From https://github.com/jnunemaker/dotfiles/blob/master/bash/functions
