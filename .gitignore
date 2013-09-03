@@ -1,3 +1,6 @@
-sublime/User/Package\ Control.sublime-settings
-sublime/User/Package Control.last-run
 git/gitconfig.symlink
+
+# Sublime
+sublime/User/Package Control.last-run
+sublime/User/Package Control.cache
+sublime/User/Package Control.system-ca-bundle
