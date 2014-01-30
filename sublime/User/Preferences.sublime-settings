@@ -1,16 +1,28 @@
 {
+	"caret_style": "phase",
+	"color_scheme": "Packages/Tomorrow-Night.tmTheme",
 	"drawWhiteSpace": true,
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 12.0,
 	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"matchBracketsAngle": true,
 	"matchBracketsBraces": true,
 	"matchBracketsSquare": true,
-	"rulers": [ 80 ],
+	"rulers":
+	[
+		80
+	],
 	"show_minimap": false,
 	"tab_size": 2,
-	"theme": "Soda Dark.sublime-theme",
+	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
+	"line_padding_bottom": 1,
+	"highlight_line": true,
+	"line_padding_top": 1,
 }
