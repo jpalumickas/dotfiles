@@ -21,3 +21,6 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Projects
+alias ss="c SameSystem/samesystem"
