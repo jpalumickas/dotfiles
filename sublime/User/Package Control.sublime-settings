@@ -1,7 +1,18 @@
 {
 	"installed_packages":
 	[
+		"ApplySyntax",
+		"Better CoffeeScript",
+		"Cucumber",
+		"INI",
 		"LESS",
+		"Pretty JSON",
+		"RSpec",
+		"RuboCop",
+		"Ruby on Rails snippets",
+		"Ruby Slim",
+		"Sass",
+		"SourcePawn Syntax Highlighting",
 		"Theme - Soda"
 	]
 }
