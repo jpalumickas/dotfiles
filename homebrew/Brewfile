@@ -1,0 +1,12 @@
+install git
+install hub
+install mackup
+install node
+install rbenv
+install redis
+install ruby-build
+install sqlite
+install grc
+install wget --enable-iri
+install coreutils
+install spark

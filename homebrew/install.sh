@@ -12,17 +12,8 @@ then
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)" > /tmp/homebrew-install.log
 fi
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-
-# Install wget with IRI support
-brew install wget --enable-iri
-
-# Install everything else
-brew install grc
-brew install spark
-brew install git
-brew install hub
+# Run Homebrew bundle.
+brew bundle $ZSH/homebrew/Brewfile
 
 # Remove outdated versions from the cellar
 brew cleanup
