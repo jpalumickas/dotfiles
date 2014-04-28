@@ -1,5 +1,12 @@
 git/gitconfig.symlink
 
+# Atom
+atom.symlink/.node-gyp
+atom.symlink/.storage
+atom.symlink/packages
+atom.symlink/storage
+atom.symlink/themes
+
 # Sublime
 sublime/User/Package Control.last-run
 sublime/User/Package Control.ca-list

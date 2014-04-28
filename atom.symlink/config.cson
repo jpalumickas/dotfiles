@@ -1,0 +1,33 @@
+'editor':
+  'fontSize': 15
+  'showIndentGuide': true
+  'fontFamily': 'Menlo'
+'core':
+  'excludeVcsIgnoredPaths': true
+  'ignoredNames': [
+    '.DS_Store'
+    '.bundle'
+    '.git'
+  ]
+  'themes': [
+    'spacegray-dark-ui'
+    'base16-ocean-dark-spacegray'
+  ]
+  'hideGitIgnoredFiles': true
+  'disabledPackages': [
+    'background-tips'
+    'exception-reporting'
+    'metrics'
+  ]
+'spell-check':
+  'grammars': [
+    'text.plain'
+    'source.gfm'
+    'text.git-commit'
+  ]
+'welcome':
+  'showOnStartup': false
+'release-notes':
+  'viewedVersion': '0.86.0'
+'tree-view':
+  'hideIgnoredNames': true
