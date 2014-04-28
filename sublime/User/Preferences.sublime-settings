@@ -1,9 +1,10 @@
 {
 	"caret_style": "phase",
-	"color_scheme": "Packages/Tomorrow-Night.tmTheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"drawWhiteSpace": true,
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 12.0,
+	"font_face": "Menlo",
+	"font_size": 14.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -21,7 +22,7 @@
 	],
 	"show_minimap": false,
 	"tab_size": 2,
-	"theme": "Soda Dark 3.sublime-theme",
+	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true
