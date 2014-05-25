@@ -6,6 +6,7 @@ atom.symlink/.storage
 atom.symlink/packages
 atom.symlink/storage
 atom.symlink/themes
+atom.symlink/compile-cache
 
 # Sublime
 sublime/User/Package Control.last-run

@@ -15,8 +15,6 @@
   ]
   'hideGitIgnoredFiles': true
   'disabledPackages': [
-    'background-tips'
-    'exception-reporting'
     'metrics'
   ]
 'spell-check':
@@ -28,6 +26,9 @@
 'welcome':
   'showOnStartup': false
 'release-notes':
-  'viewedVersion': '0.86.0'
+  'viewedVersion': '0.95.0'
 'tree-view':
   'hideIgnoredNames': true
+'exception-reporting':
+  'userId': 'a16fb11c-80f5-993c-dac9-27e736ff535e'
+'git-diff': {}
