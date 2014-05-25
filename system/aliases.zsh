@@ -32,3 +32,7 @@ alias testas="cd ~/quest && clear && ruby parser.rb"
 alias rrfinder="killall -KILL Finder"
 alias rrdock="killall -KILL Dock" # launchctl stop com.apple.Dock.agent
 alias rrmenubar="killall -KILL SystemUIServer"
+
+# Merge PDF
+# Usage: mergepdf /PATH/TO/FILE/1.pdf /PATH/TO/FILE/2.pdf /PATH/TO/A/WHOLE/DIR/*.pdf
+alias mergepdf="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py -o ./merged_document.pdf"
