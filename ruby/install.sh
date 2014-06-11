@@ -11,3 +11,6 @@ then
   echo "  Installing ruby-build for you."
   brew install ruby-build > /tmp/ruby-build-install.log
 fi
+
+gem install rubocop
+gem install scss-lint
