@@ -2,6 +2,7 @@
   'fontSize': 15
   'showIndentGuide': true
   'fontFamily': 'Menlo'
+  'softWrap': true
 'core':
   'excludeVcsIgnoredPaths': true
   'ignoredNames': [
@@ -17,6 +18,7 @@
   'disabledPackages': [
     'metrics'
   ]
+  'projectHome': '/Users/justas/Projects'
 'spell-check':
   'grammars': [
     'text.plain'
@@ -32,3 +34,15 @@
 'exception-reporting':
   'userId': 'a16fb11c-80f5-993c-dac9-27e736ff535e'
 'git-diff': {}
+'autosave': {}
+'linter-rubocop':
+  'rubocopExecutablePath': '/Users/justas/.rbenv/shims/'
+'linter-scss-lint':
+  'scssLintExecutablePath': '/Users/justas/.rbenv/shims/'
+'linter':
+  'lintOnModified': false
+  'lintOnEditorFocus': false
+  'lintOnChange': false
+'whitespace':
+  'ignoreWhitespaceOnCurrentLine': false
+'tabs': {}
