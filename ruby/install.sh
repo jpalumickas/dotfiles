@@ -12,5 +12,14 @@ then
   brew install ruby-build > /tmp/ruby-build-install.log
 fi
 
+# Bundler settings
+number_of_cores=$(sysctl -n hw.ncpu)
+bundle config --global jobs $((number_of_cores - 1))
+
+# Heroku
+brew install heroku-toolbelt
+heroku plugins:install git://github.com/ddollar/heroku-config.git
+
+# Ruby gems
 gem install rubocop
 gem install scss-lint
