@@ -1,8 +1,25 @@
 {
+	"apply_syntax_extensions":
+	[
+		"thor",
+		"rake",
+		"jbuilder",
+		"rb",
+		"podspec",
+		"rabl",
+		"simplecov"
+	],
 	"extensions":
 	[
+		"thor",
 		"god",
+		"ru",
+		"rake",
+		"jbuilder",
+		"rb",
+		"podspec",
 		"Berksfile",
-		"ru"
+		"rabl",
+		"simplecov"
 	]
 }
