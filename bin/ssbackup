@@ -1,0 +1,116 @@
+#!/usr/bin/env ruby
+
+# Get SameSystem backup from server with specified date.
+
+BACKUPS_SERVER = '192.168.0.50'
+
+BACKUPS_PATH = "#{ENV['HOME']}/Projects/SameSystem/db_backups"
+
+EXCLUDE_FILES = %w(
+  redmine*
+  metadata*
+  *watched_exceptions.sql.gz
+  *calendar_line_logs.sql.gz
+  *fragment_logs.sql.gz
+  *log_records.sql.gz
+  *log_user_changes.sql.gz
+  *delayed_jobs.sql.gz
+  *email_queues.sql.gz
+  *bonus_type_logs.sql.gz
+)
+
+require 'date'
+require 'benchmark'
+
+start_time = Time.now
+
+class Numeric
+  def duration
+    rest, secs = self.divmod(60) # self is the time difference t2 - t1
+    rest, mins = rest.divmod(60)
+    days, hours = rest.divmod(24)
+
+    result = []
+    result << "#{days} days" if days > 0
+    result << "#{hours} hours" if hours > 0
+    result << "#{mins} minutes" if mins > 0
+    result << "#{secs.round} seconds" if secs > 0
+    result << '0 seconds' if result.empty?
+    result.join(' ')
+  end
+end
+
+unless date = ARGV[0]
+  puts "Usage: ssbackup #{Date.today}"
+  exit!(1)
+end
+
+unless date =~ /\A\d{4}-\d{2}-\d{2}\z/
+  puts 'You fool, specify date in format YYYY-MM-DD!'
+  exit!(1)
+end
+
+backup_path = "#{BACKUPS_PATH}/#{date}"
+
+# Downloading backup files
+if File.directory?(backup_path)
+  puts "\e[33mBackup directory for date #{date} already exist! Going to check it...\e[0m"
+else
+  print "\e[33mGetting a backup files for #{date}\e[0m "
+  excludes_string = EXCLUDE_FILES.map { |exclude| "--exclude '#{exclude}'" }.join(' ')
+
+  rsync_time = Benchmark.realtime do
+    system("rsync -qav #{excludes_string} samesystem@#{BACKUPS_SERVER}:/var/backups/mysql/#{date} \"#{BACKUPS_PATH}\"")
+  end
+
+  puts "\e[32mDone!\e[0m (#{rsync_time.to_f.round(2).duration})"
+end
+
+puts "\n"
+
+# Checking if dir realy exists.
+unless File.directory?(backup_path)
+  puts "\e[31mSomething went wrong, I can't find downloaded directory.\e[0m"
+  puts "\e[31mI need files in directory \e[33m#{backup_path}\e[0m"
+  exit!(1)
+end
+
+# Unziping downloaded files.
+print("\e[33mUnziping compressed files.\e[0m ")
+system("find \"#{backup_path}\" -name \"*.gz\" -exec gunzip {}" + ' \;')
+puts("\e[32mDone!\e[0m")
+
+# Creating MySQL database.
+database_name = "samesystem_#{date.gsub('-', '')}"
+print("\e[33mCreating database with name #{database_name}\e[0m ")
+
+system("mysql -uroot -e \"drop database #{database_name}\" &> /dev/null")
+system("mysql -uroot -e \"create database #{database_name}\"")
+system("mysql -uroot -e \"set global sql_mode='NO_ENGINE_SUBSTITUTION'\"")
+puts("\e[32mDone!\e[0m")
+puts "\n"
+
+# Importing files into database.
+schema_files = Dir.glob("#{backup_path}/*schema.sql")
+data_files = Dir.glob("#{backup_path}/*.sql") - schema_files
+
+puts "\e[33mImporting schema files:\e[0m"
+schema_files.each do |file|
+  print "Importing #{File.basename(file)} "
+  time = Benchmark.realtime { system("echo \"source #{file}\" | mysql -uroot #{database_name} --batch") }
+  puts "\e[32mDone!\e[0m (#{time.to_f.round(2).duration})"
+end
+
+puts "\n"
+
+puts "\e[33mImporting data files:\e[0m"
+data_files.each do |file|
+  print "Importing #{File.basename(file)} "
+  time = Benchmark.realtime { system("echo \"source #{file}\" | mysql -uroot #{database_name} --batch") }
+  puts "\e[32mDone!\e[0m (#{time.to_f.round(2).duration})"
+end
+
+puts "\n"
+
+total_time = Time.now - start_time
+puts "\e[32mBackup installing completed in \e[33m#{total_time.to_f.round(2).duration}\e[32m! Database is ready to be used.\e[0m"
