@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require 'net/http'
+
+unless (search_text = ARGV[0])
+  puts "\e[33mUsage: slang TEXT\e[0m"
+  exit!(1)
+end
+
+uri = URI('http://www.internetslang.com/suggest.asp')
+res = Net::HTTP.post_form(uri, abbrev: search_text.strip, submit: 'Submit')
+
+body = res.body
+
+unless body && (matches = body.match(/The definition of (.+) is "(.+)"/))
+  puts "\e[31mCannot find this slang ;(\e[0m"
+  exit!(1)
+end
+
+abbrev = matches[1]
+text = matches[2]
+
+puts("\e[32m#{abbrev} \e[0mis \e[32m\"#{text}\"\e[0m")
+exit!(1)
