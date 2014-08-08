@@ -19,6 +19,7 @@
     'metrics'
   ]
   'projectHome': '/Users/justas/Projects'
+  'useReactEditor': true
 'spell-check':
   'grammars': [
     'text.plain'
