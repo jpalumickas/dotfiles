@@ -1,3 +1,4 @@
 [
-  { "keys": ["super+enter"], "command": "goto_definition" }
+  // { "keys": ["super+enter"], "command": "goto_definition" },
+  { "keys": ["super+v"], "command": "paste_and_indent" },
 ]
