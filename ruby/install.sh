@@ -21,7 +21,4 @@ brew install heroku-toolbelt
 heroku plugins:install git://github.com/ddollar/heroku-config.git
 
 # Ruby gems
-gem install rubocop
-gem install scss-lint
-gem install byebug
-gem install debugger
+gem install rubocop scss-lint byebug debugger rubycritic flog flay

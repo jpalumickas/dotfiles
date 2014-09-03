@@ -15,5 +15,10 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install homebrew packages
+# Update Homebrew formulas
+brew unlink openssl && brew link openssl --force
+brew unlink readline && brew link readline --force
+
+# Install other packages
 $ZSH/homebrew/install.sh 2>&1
+$ZSH/ruby/install.sh 2>&1
