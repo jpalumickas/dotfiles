@@ -3,6 +3,7 @@
   'showIndentGuide': true
   'fontFamily': 'Menlo'
   'softWrap': true
+  'invisibles': {}
 'core':
   'excludeVcsIgnoredPaths': true
   'ignoredNames': [
