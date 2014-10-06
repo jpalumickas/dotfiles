@@ -48,3 +48,4 @@
 'whitespace':
   'ignoreWhitespaceOnCurrentLine': false
 'tabs': {}
+'markdown-preview': {}
