@@ -1,0 +1,9 @@
+bundler
+rubocop
+scss-lint
+byebug
+debugger
+rubycritic
+flog
+flay
+mailcatcher
