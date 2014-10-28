@@ -7,3 +7,4 @@ alias rs='rails s'
 alias rc='rails c'
 alias rsc='rs -e cucumber -p 3333 -P tmp/pids/server_cucumber.pid'
 alias krs='ps aux | grep rails | grep -v grep | awk '"'"'{print $2}'"'"' | xargs kill -9'
+alias sskeleton="rake test:migrations RAILS_ENV=testing_skeleton"
