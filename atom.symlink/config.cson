@@ -1,51 +1,47 @@
-'editor':
-  'fontSize': 15
-  'showIndentGuide': true
-  'fontFamily': 'Menlo'
-  'softWrap': true
-  'invisibles': {}
-'core':
-  'excludeVcsIgnoredPaths': true
-  'ignoredNames': [
-    '.DS_Store'
-    '.bundle'
-    '.git'
-  ]
-  'themes': [
-    'spacegray-dark-ui'
-    'base16-ocean-dark-spacegray'
-  ]
-  'hideGitIgnoredFiles': true
-  'disabledPackages': [
-    'metrics'
-  ]
-  'projectHome': '/Users/justas/Projects'
-  'useReactEditor': true
-'spell-check':
-  'grammars': [
-    'text.plain'
-    'source.gfm'
-    'text.git-commit'
-  ]
-'welcome':
-  'showOnStartup': false
-'release-notes':
-  'viewedVersion': '0.95.0'
-'tree-view':
-  'hideIgnoredNames': true
-'exception-reporting':
-  'userId': 'a16fb11c-80f5-993c-dac9-27e736ff535e'
-'git-diff': {}
-'autosave': {}
-'linter-rubocop':
-  'rubocopExecutablePath': '/Users/justas/.rbenv/shims/'
-'linter-scss-lint':
-  'scssLintExecutablePath': '/Users/justas/.rbenv/shims/'
-'linter':
-  'lintOnModified': false
-  'lintOnEditorFocus': false
-  'lintOnChange': false
-'whitespace':
-  'ignoreWhitespaceOnCurrentLine': false
-'tabs': {}
-'markdown-preview': {}
+'global':
+  'editor':
+    'fontSize': 15
+    'showIndentGuide': true
+    'fontFamily': 'Menlo'
+    'invisibles': {}
+  'core':
+    'ignoredNames': [
+      '.DS_Store'
+      '.bundle'
+      '.git'
+    ]
+    'themes': [
+      'spacegray-dark-ui'
+      'base16-ocean-dark-spacegray'
+    ]
+    'hideGitIgnoredFiles': true
+    'disabledPackages': [
+      'metrics'
+    ]
+    'projectHome': '/Users/justas/Projects'
+    'useReactEditor': true
+  'spell-check':
+    'grammars': [
+      'text.plain'
+      'source.gfm'
+      'text.git-commit'
+    ]
+  'welcome':
+    'showOnStartup': false
+  'release-notes':
+    'viewedVersion': '0.95.0'
+  'tree-view':
+    'hideIgnoredNames': true
+  'exception-reporting':
+    'userId': 'a16fb11c-80f5-993c-dac9-27e736ff535e'
+  'linter-rubocop':
+    'rubocopExecutablePath': '/Users/justas/.rbenv/shims/'
+  'linter-scss-lint':
+    'scssLintExecutablePath': '/Users/justas/.rbenv/shims/'
+  'linter':
+    'lintOnModified': false
+    'lintOnEditorFocus': false
+    'lintOnChange': false
+  'whitespace':
+    'ignoreWhitespaceOnCurrentLine': false
+  'tabs': {}
