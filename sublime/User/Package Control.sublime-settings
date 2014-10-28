@@ -27,9 +27,11 @@
 		"SourcePawn Syntax Highlighting",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeLinter-annotations",
 		"SublimeLinter-coffeelint",
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
+		"SublimeLinter-json",
 		"SublimeLinter-rubocop",
 		"Theme - Soda",
 		"Theme - Spacegray"
