@@ -44,4 +44,3 @@
     'lintOnChange': false
   'whitespace':
     'ignoreWhitespaceOnCurrentLine': false
-  'tabs': {}

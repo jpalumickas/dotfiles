@@ -134,6 +134,8 @@ install_dotfiles () {
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
+
+  link_file "$DOTFILES_ROOT/ruby/rbenv/default-gems" "$HOME/.rbenv/default-gems"
 }
 
 setup_gitconfig
