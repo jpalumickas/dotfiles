@@ -17,9 +17,10 @@ number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
 # Heroku
-brew install heroku-toolbelt
-heroku plugins:install git://github.com/ddollar/heroku-config.git
+if test ! $(which heroku)
+then
+  echo "  Installing heroku-toolbelt for you."
+  brew install heroku-toolbelt
+fi
 
-# Ruby gems
-gem install rubocop scss-lint byebug debugger rubycritic flog flay
-gem install mailcatcher
+heroku plugins:install git://github.com/ddollar/heroku-config.git
