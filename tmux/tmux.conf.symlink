@@ -1,0 +1,31 @@
+set-window-option -g clock-mode-style 24
+set -g renumber-windows on
+set-option -g status-left-length 19
+set-option -g status-utf8 on
+
+set-option -g prefix C-q
+bind-key C-q last-window
+
+set -s escape-time 0
+set -sg repeat-time 600
+
+# reload ~/.tmux.conf using PREFIX r
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+# start window numbers at 1 to match keyboard order with tmux window order
+set -g base-index 1
+set-window-option -g pane-base-index 1
+
+# disable renaming for tmuxinator
+set-option -g allow-rename off
+set-window-option -g automatic-rename off
+
+# sane scrolling
+set -g mode-mouse on
+set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
+
+# highlight active window
+set-window-option -g window-status-current-fg colour1
+set-window-option -g window-status-current-bg colour10
+set-window-option -g window-status-current-format ' #I #W '
