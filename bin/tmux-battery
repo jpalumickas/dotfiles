@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# MacBook battery level formatted for tmux status bar
+# Adapted from: https://github.com/Goles/Battery
+
+connected=0
+
+battery_info() {
+    ioreg -n AppleSmartBattery -r | \
+    grep -o '"[^"]*" = [^ ]*' | \
+    sed -e 's/= //g' -e 's/"//g' | \
+    sort
+}
+
+battery_charge() {
+    battery_info | \
+    while read key value; do
+        case $key in
+            "MaxCapacity")
+                export maxcap=$value;;
+            "CurrentCapacity")
+                export curcap=$value;;
+        esac
+        if [[ -n "$maxcap" && -n $curcap ]]; then
+            CAPACITY=$(( 100 * curcap / maxcap))
+            printf "%d" $CAPACITY
+            break
+        fi
+    done
+}
+
+battery_external_connected() {
+  battery_info | grep "ExternalConnected" | cut -f2 -d' '
+}
+
+if [[ ! $(battery_external_connected) = "No" ]]; then
+  connected=1
+fi
+
+BATTERY_STATUS="$(pmset -g batt | grep -o '[0-9]*%' | tr -d %)"
+
+[ -z "$BATTERY_STATUS" ] && exit 1
+
+if [ $BATTERY_STATUS -lt 25 ]; then
+  fg=colour210
+  bg=colour88
+elif [ $BATTERY_STATUS -lt 75 ]; then
+  fg=colour228
+  bg=colour94
+else
+  fg=colour8
+  bg=colour234
+fi
+
+if ((connected)); then
+  GRAPH=" ⚡"
+else
+  GRAPH=""
+fi
+
+printf "#[fg=${fg},bg=${bg}] %2d%%${GRAPH}" $BATTERY_STATUS
