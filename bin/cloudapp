@@ -37,7 +37,7 @@ unless File.exist?(config_file)
   exit!(1)
 end
 
-email,password = File.read(config_file).split("\n")
+email, password = File.read(config_file).split("\n")
 
 if ARGV[0].nil?
    puts "You need to specify a file to upload."

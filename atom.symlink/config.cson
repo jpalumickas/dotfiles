@@ -17,6 +17,7 @@
     'hideGitIgnoredFiles': true
     'disabledPackages': [
       'metrics'
+      'vim-mode'
     ]
     'projectHome': '/Users/justas/Projects'
     'useReactEditor': true
@@ -39,8 +40,6 @@
   'linter-scss-lint':
     'scssLintExecutablePath': '/Users/justas/.rbenv/shims/'
   'linter':
-    'lintOnModified': false
-    'lintOnEditorFocus': false
-    'lintOnChange': false
+    'lintOnModified': true
   'whitespace':
     'ignoreWhitespaceOnCurrentLine': false

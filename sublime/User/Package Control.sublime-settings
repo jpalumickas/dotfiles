@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"AlignTab",
 		"ApplySyntax",
 		"Better CoffeeScript",
 		"Cucumber",
