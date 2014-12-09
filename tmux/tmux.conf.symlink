@@ -1,3 +1,5 @@
+set -g default-terminal "screen-256color"
+
 set-window-option -g clock-mode-style 24
 set -g renumber-windows on
 set-option -g status-left-length 19
@@ -29,3 +31,15 @@ set -g terminal-overrides 'xterm*:smcup@:rmcup@'
 set-window-option -g window-status-current-fg colour1
 set-window-option -g window-status-current-bg colour10
 set-window-option -g window-status-current-format ' #I #W '
+
+# enable clipboard
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+# window list
+set -g window-status-format "#[fg=colour8] #I #[fg=colour231]#W#[fg=colour166]#F "
+set -g window-status-current-format "#[fg=colour166,bg=colour31] #I #[fg=colour231]#W#[fg=colour234]#F "
+set -g window-status-separator ""
+
+# battery and pomo status <http://git.io/zMf0IA>
+set -g status-right ' #(tmux-battery) '
+set -g status-interval 15

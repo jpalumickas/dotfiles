@@ -16,5 +16,6 @@ sublime/User/Package Control.system-ca-bundle
 sublime/User/Package Control.cache/
 sublime/User/Package Control.ca-certs/
 
-# Vim bundle
+# Vim
 vim/vim.symlink/bundle
+vim/vim.symlink/.netrwhist
