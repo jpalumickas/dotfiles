@@ -11,8 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Define bundles via Github repos
 Plugin 'christoomey/vim-run-interactive'
-Plugin 'croaky/vim-colors-github'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'scrooloose/syntastic'
@@ -28,12 +26,16 @@ Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/tComment'
 Plugin 'scrooloose/nerdtree'
-Plugin 'chriskempson/base16-vim'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'chriskempson/base16-vim' " Base16 Colors
+Plugin 'jtratner/vim-flavored-markdown' " GitHub markdown
+Plugin 'rking/ag.vim' " For searching
 
 " Syntax
 Plugin 'tpope/vim-cucumber'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-rails'
+Plugin 'kchmck/vim-coffee-script'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

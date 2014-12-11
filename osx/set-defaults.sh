@@ -112,3 +112,6 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 defaults write com.apple.terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
+
+# Disable CMD+/ in iTerm
+defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add "Find Cursor" nil
