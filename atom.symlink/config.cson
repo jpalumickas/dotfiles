@@ -3,7 +3,6 @@
     'fontSize': 15
     'showIndentGuide': true
     'fontFamily': 'Menlo'
-    'invisibles': {}
   'core':
     'ignoredNames': [
       '.DS_Store'
