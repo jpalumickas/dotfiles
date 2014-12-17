@@ -122,8 +122,11 @@ set-option -g   visual-content    off
 set-option -g   set-titles        on
 set-option -gw  automatic-rename  on
 set-option -gw  monitor-activity  off
-set-option -gw  monitor-content   off
 
+# Commented out because of lag in VIM
+# set-option -gw  monitor-content   off
+
+set-window-option -g pane-base-index 1
 set-window-option -g window-status-format ' #I #W '
 set-window-option -g window-status-attr dim
 
