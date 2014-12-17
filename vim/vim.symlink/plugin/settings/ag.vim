@@ -10,4 +10,6 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 
   map <leader>f :Ag<space>
+
+  let g:agprg="ag --column"
 endif

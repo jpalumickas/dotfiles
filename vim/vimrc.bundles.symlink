@@ -28,8 +28,10 @@ Plugin 'vim-scripts/tComment'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'chriskempson/base16-vim' " Base16 Colors
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'jtratner/vim-flavored-markdown' " GitHub markdown
 Plugin 'rking/ag.vim' " For searching
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Syntax
 Plugin 'tpope/vim-cucumber'
