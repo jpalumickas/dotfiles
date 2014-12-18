@@ -4,7 +4,7 @@
 
 Your dotfiles are how you personalize your system. These are mine.
 
-These are taken from [holman][] and edited for my personal use.
+These are taken from [@holman][] and edited for my personal use.
 
 ## install
 
@@ -54,8 +54,8 @@ There's a few special files in the hierarchy.
 
 ## thanks
 
-[Zach Holman][holman] for his [dotfiles][holman dotfiles] and [Dotfiles Are Meant To Be Forked][holman article] article.
+[Zach Holman][@holman] for his [dotfiles][holman dotfiles] and [Dotfiles Are Meant To Be Forked][holman article] article.
 
-[holman]: http://github.com/holman
+[@holman]: http://github.com/holman
 [holman dotfiles]: http://github.com/holman/dotfiles
 [holman article]: http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked

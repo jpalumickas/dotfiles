@@ -9,16 +9,8 @@ export ZSH=$HOME/.dotfiles
 # Set OS X defaults
 $ZSH/osx/set-defaults.sh
 
-# Make sure we’re using the latest Homebrew
-brew update
-
-# Upgrade any already-installed formulae
-brew upgrade
-
-# Update Homebrew formulas
-brew unlink openssl && brew link openssl --force
-brew unlink readline && brew link readline --force
+# Upgrade homebrew and Install homebrew packages
+brew bundle $ZSH/homebrew/Brewfile
 
 # Install other packages
-$ZSH/homebrew/install.sh 2>&1
 $ZSH/ruby/install.sh 2>&1

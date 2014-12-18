@@ -1,3 +1,5 @@
+update
+
 # Utilities
 install mackup # Auto backup settings
 install sqlite
@@ -11,6 +13,8 @@ install imagemagick
 install qt # used by Capybara Webkit for headless Javascript integration testing
 install watch
 install reattach-to-user-namespace # Tmux clipboard
+install ack
+install tree
 
 tap Goles/battery
 install battery
@@ -31,4 +35,10 @@ install tmux
 
 # Open SSL
 install openssl
+unlink openssl
 link openssl --force
+
+# Readline
+install readline
+unlink readline
+link readline --force
