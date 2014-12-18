@@ -8,7 +8,7 @@ au bufwritepre * :%s/\s\+$//e
 nnoremap <leader>n :tab new<CR>
 
 " Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
+map <Leader>ct :!ctags --tag-relative -Rf ./.git/tags --exclude=.git --languages=-javascript,sql<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>

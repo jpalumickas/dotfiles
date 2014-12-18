@@ -99,7 +99,7 @@ filetype indent on
 
 set list listchars=tab:\ \ ,trail:·   " Display tabs and trailing spaces visually
 set nowrap                            " Don't wrap lines
-set linebreak                         " Wrap lines at convenient points
+" set linebreak                         " Wrap lines at convenient points
 
 " Make it obvious where 80 characters is
 set textwidth=80
