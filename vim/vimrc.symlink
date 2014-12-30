@@ -29,6 +29,7 @@ set splitright          " Opens vertical split right of current window
 set splitbelow          " Opens horizontal split below current window
 set ruler               " Show the cursor position all the time
 set lazyredraw
+set timeoutlen=500
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
