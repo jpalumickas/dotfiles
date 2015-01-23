@@ -1,4 +1,12 @@
 {
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"AlignTab",
@@ -14,6 +22,7 @@
 		"Jade",
 		"JavaPropertiesEditor",
 		"LESS",
+		"Package Control",
 		"Pretty JSON",
 		"Puppet",
 		"Rails Latest Migration",

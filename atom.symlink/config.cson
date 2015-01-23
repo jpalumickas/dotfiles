@@ -1,25 +1,24 @@
-'global':
+'*':
   'editor':
+    'fontFamily': 'Menlo'
     'fontSize': 15
     'showIndentGuide': true
-    'fontFamily': 'Menlo'
+    'invisibles': {}
   'core':
     'ignoredNames': [
       '.DS_Store'
       '.bundle'
       '.git'
     ]
-    'themes': [
-      'spacegray-dark-ui'
-      'base16-ocean-dark-spacegray'
-    ]
-    'hideGitIgnoredFiles': true
     'disabledPackages': [
       'metrics'
       'vim-mode'
     ]
+    'themes': [
+      'spacegray-dark-ui'
+      'base16-ocean-dark-spacegray'
+    ]
     'projectHome': '/Users/justas/Projects'
-    'useReactEditor': true
   'spell-check':
     'grammars': [
       'text.plain'
@@ -38,7 +37,6 @@
     'rubocopExecutablePath': '/Users/justas/.rbenv/shims/'
   'linter-scss-lint':
     'scssLintExecutablePath': '/Users/justas/.rbenv/shims/'
-  'linter':
-    'lintOnModified': true
+  'linter': {}
   'whitespace':
     'ignoreWhitespaceOnCurrentLine': false
