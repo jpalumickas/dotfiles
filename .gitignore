@@ -1,3 +1,4 @@
+# Git
 git/gitconfig.symlink
 
 # Atom
@@ -19,3 +20,6 @@ sublime/User/Package Control.ca-certs/
 # Vim
 vim/vim.symlink/bundle
 vim/vim.symlink/.netrwhist
+
+# Bin
+bin/pgweb
