@@ -1,42 +1,42 @@
-'*':
-  'editor':
-    'fontFamily': 'Menlo'
-    'fontSize': 15
-    'showIndentGuide': true
-    'invisibles': {}
-  'core':
-    'ignoredNames': [
-      '.DS_Store'
-      '.bundle'
-      '.git'
+"*":
+  editor:
+    fontFamily: "Menlo"
+    fontSize: 15
+    showIndentGuide: true
+    invisibles: {}
+  core:
+    ignoredNames: [
+      ".DS_Store"
+      ".bundle"
+      ".git"
     ]
-    'disabledPackages': [
-      'metrics'
-      'vim-mode'
+    disabledPackages: [
+      "metrics"
+      "vim-mode"
     ]
-    'themes': [
-      'spacegray-dark-ui'
-      'base16-ocean-dark-spacegray'
+    themes: [
+      "spacegray-dark-ui"
+      "base16-ocean-dark-spacegray"
     ]
-    'projectHome': '/Users/justas/Projects'
-  'spell-check':
-    'grammars': [
-      'text.plain'
-      'source.gfm'
-      'text.git-commit'
+    projectHome: "/Users/justas/Projects"
+  "spell-check":
+    grammars: [
+      "text.plain"
+      "source.gfm"
+      "text.git-commit"
     ]
-  'welcome':
-    'showOnStartup': false
-  'release-notes':
-    'viewedVersion': '0.95.0'
-  'tree-view':
-    'hideIgnoredNames': true
-  'exception-reporting':
-    'userId': 'a16fb11c-80f5-993c-dac9-27e736ff535e'
-  'linter-rubocop':
-    'rubocopExecutablePath': '/Users/justas/.rbenv/shims/'
-  'linter-scss-lint':
-    'scssLintExecutablePath': '/Users/justas/.rbenv/shims/'
-  'linter': {}
-  'whitespace':
-    'ignoreWhitespaceOnCurrentLine': false
+  welcome:
+    showOnStartup: false
+  "release-notes":
+    viewedVersion: "0.95.0"
+  "tree-view":
+    hideIgnoredNames: true
+  "exception-reporting":
+    userId: "a16fb11c-80f5-993c-dac9-27e736ff535e"
+  "linter-rubocop":
+    rubocopExecutablePath: "/Users/justas/.rbenv/shims/"
+  "linter-scss-lint":
+    scssLintExecutablePath: "/Users/justas/.rbenv/shims/"
+  linter: {}
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
