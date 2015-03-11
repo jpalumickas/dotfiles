@@ -23,6 +23,9 @@ augroup vimrcEx
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
+  " Disable wrap on some languages
+  autocmd BufRead,BufNewFile *.slim setlocal textwidth=0
+
   " Automatically wrap at 72 characters and spell check git commit messages
   autocmd FileType gitcommit setlocal textwidth=72
   autocmd FileType gitcommit setlocal spell

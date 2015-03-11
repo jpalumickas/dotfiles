@@ -11,7 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Define bundles via Github repos
 Plugin 'christoomey/vim-run-interactive'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'scrooloose/syntastic'
 Plugin 'thoughtbot/vim-rspec'
@@ -32,12 +32,16 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'jtratner/vim-flavored-markdown' " GitHub markdown
 Plugin 'rking/ag.vim' " For searching
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'junegunn/vim-easy-align'
 
 " Syntax
 Plugin 'tpope/vim-cucumber'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-rails'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
