@@ -9,6 +9,9 @@ then
   alias la='gls -A --color'
 fi
 
+# Pretty print the path
+alias path="echo $PATH | tr -s ':' '\n'"
+
 # Get week number
 alias week='date +%V'
 
