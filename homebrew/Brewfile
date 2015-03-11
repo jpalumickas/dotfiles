@@ -42,3 +42,11 @@ link openssl --force
 install readline
 unlink readline
 link readline --force
+
+# Casks
+cask install github
+cask install spotify
+cask install skype --appdir=/Applications
+cask install google-chrome --appdir=/Applications
+cask install slack
+cask install vlc --appdir=/Applications
