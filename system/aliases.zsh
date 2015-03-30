@@ -39,3 +39,6 @@ alias rrmenubar="killall -KILL SystemUIServer"
 # Merge PDF
 # Usage: mergepdf /PATH/TO/FILE/1.pdf /PATH/TO/FILE/2.pdf /PATH/TO/A/WHOLE/DIR/*.pdf
 alias mergepdf="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py -o ./merged_document.pdf"
+
+alias hgr='$(history 1 | sort -ur | cut -c8- | pick)'
+alias hg="history 1 | grep"
