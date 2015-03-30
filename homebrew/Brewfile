@@ -16,6 +16,9 @@ install reattach-to-user-namespace # Tmux clipboard
 install ack
 install tree
 
+tap thoughtbot/formulae
+install pick
+
 tap Goles/battery
 install battery
 
