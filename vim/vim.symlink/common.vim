@@ -13,6 +13,9 @@ map <Leader>ct :!ctags --tag-relative -Rf ./.git/tags --exclude=.git --languages
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
+" remove search highlighting
+nnoremap <leader>h :noh<cr>
+
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
 
@@ -63,13 +66,17 @@ inoremap <S-Tab> <c-n>
 
 " Remove empty lines
 " ==================
-function TrimEndLines()
-  let save_cursor = getpos(".")
-  :silent! %s#\($\n\s*\)\+\%$##
-  call setpos('.', save_cursor)
-endfunction
+augroup trimEndLines
+  autocmd!
 
-au BufWritePre * call TrimEndLines()
+  function! TrimEndLines()
+    let save_cursor = getpos(".")
+    :silent! %s#\($\n\s*\)\+\%$##
+    call setpos('.', save_cursor)
+  endfunction
+
+  au BufWritePre * call TrimEndLines()
+augroup END
 
 
 

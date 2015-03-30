@@ -42,6 +42,7 @@ Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-rails'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
+Plugin 'digitaltoad/vim-jade'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

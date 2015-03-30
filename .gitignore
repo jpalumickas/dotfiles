@@ -23,3 +23,5 @@ vim/vim.symlink/.netrwhist
 
 # Bin
 bin/pgweb
+
+atom.symlink/.apm/.apmrc

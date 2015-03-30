@@ -24,7 +24,8 @@ set hidden              " Buffers can exist in the background
 set splitright          " Opens vertical split right of current window
 set splitbelow          " Opens horizontal split below current window
 set ruler               " Show the cursor position all the time
-set lazyredraw
+set lazyredraw          " Faster scroll
+set ttyscroll=3         " Faster scroll
 set timeoutlen=500
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
@@ -33,6 +34,12 @@ set spellfile=$HOME/.vim-spell-en.utf-8.add
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+" Undo
+set undofile                    " Save undo's after file closes
+set undodir=~/.vim/undo         " where to save undo histories
+set undolevels=1000             " How many undos
+set undoreload=10000            " number of lines to save for undo
 
 
 
@@ -46,9 +53,12 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax enable
 endif
 
+syntax sync fromstart
+
+" Syntax coloring lines that are too long just slows down the world
+set synmaxcol=1200
+
 set t_Co=256
-
-
 
 " Mouse
 " ======
