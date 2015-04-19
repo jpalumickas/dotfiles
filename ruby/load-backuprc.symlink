@@ -12,6 +12,7 @@
     "*log_user_changes",
     "*delayed_jobs",
     "*email_queues",
-    "*bonus_type_logs"
+    "*bonus_type_logs",
+    "sessions"
   ]
 }
