@@ -69,6 +69,7 @@ bind-key -r h   select-pane -t :.-
 bind-key -r l   select-pane -t :.+
 
 set -g history-limit 10000
+set -g focus-events on
 
 ## messages
 set-option -g quiet

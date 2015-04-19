@@ -31,10 +31,10 @@ Plugin 'chriskempson/base16-vim' " Base16 Colors
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jtratner/vim-flavored-markdown' " GitHub markdown
 Plugin 'rking/ag.vim' " For searching
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'gorodinskiy/vim-coloresque'
 
 " Syntax
 Plugin 'tpope/vim-cucumber'
@@ -43,6 +43,13 @@ Plugin 'tpope/vim-rails'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'digitaltoad/vim-jade'
+
+" Tmux
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'tmux-plugins/vim-tmux'
+Plugin 'wellle/tmux-complete.vim'
+Plugin 'benmills/vimux'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
