@@ -32,4 +32,18 @@ augroup vimrcEx
 
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
+
+  " Autocomplete ids and classes in CSS
+  autocmd FileType css,scss set iskeyword=@,48-57,_,-,?,!,192-255
+  " Add the '-' as a keyword in erb files
+  autocmd FileType eruby set iskeyword=@,48-57,_,192-255,$,-
+
+  " Auto reload VIM when settings changed
+  autocmd BufWritePost .vimrc so $MYVIMRC
+  autocmd BufWritePost *.vim so $MYVIMRC
+  autocmd BufWritePost vimrc.symlink so $MYVIMRC
+
+  " Make those debugger statements painfully obvious
+  au BufEnter *.rb syn match error contained "\<binding.pry\>"
+  au BufEnter *.rb syn match error contained "\<debugger\>"
 augroup END
