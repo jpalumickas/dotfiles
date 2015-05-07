@@ -13,9 +13,11 @@
     disabledPackages: [
       "metrics"
       "vim-mode"
+      "preview-tabs"
+      "script"
     ]
     themes: [
-      "spacegray-dark-ui"
+      "atom-dark-ui"
       "base16-ocean-dark-spacegray"
     ]
     projectHome: "/Users/justas/Projects"
