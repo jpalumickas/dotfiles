@@ -2,26 +2,25 @@
 git/gitconfig.symlink
 
 # Atom
+atom.symlink/.apm
 atom.symlink/.node-gyp
 atom.symlink/.storage
+atom.symlink/compile-cache
 atom.symlink/packages
 atom.symlink/storage
 atom.symlink/themes
-atom.symlink/compile-cache
 
 # Sublime
-sublime/User/Package Control.last-run
-sublime/User/Package Control.ca-list
 sublime/User/Package Control.ca-bundle
-sublime/User/Package Control.system-ca-bundle
-sublime/User/Package Control.cache/
 sublime/User/Package Control.ca-certs/
+sublime/User/Package Control.ca-list
+sublime/User/Package Control.cache/
+sublime/User/Package Control.last-run
+sublime/User/Package Control.system-ca-bundle
 
 # Vim
-vim/vim.symlink/bundle
 vim/vim.symlink/.netrwhist
+vim/vim.symlink/bundle
 
 # Bin
 bin/pgweb
-
-atom.symlink/.apm/.apmrc
