@@ -1,0 +1,64 @@
+#update
+
+# Taps
+tap 'caskroom/cask'
+tap 'thoughtbot/formulae' # Used for: pick
+tap 'Goles/battery' # Used for: battery
+
+# First ones
+brew 'cmake'
+
+# Utilities
+brew 'mackup' # Auto backup settings
+brew 'sqlite'
+brew 'grc'
+brew 'wget', args: ['enable-iri']
+brew 'coreutils'
+brew 'spark'
+brew 'the_silver_searcher' # Faster search than ack
+brew 'ctags'
+brew 'imagemagick'
+brew 'qt' # used by Capybara Webkit for headless Javascript integration testing
+brew 'watch'
+brew 'reattach-to-user-namespace' # Tmux clipboard
+brew 'ack'
+brew 'tree'
+brew 'ssh-copy-id'
+brew 'pick'
+brew 'battery'
+
+# Databases
+brew 'redis'
+brew 'postgres', args: ['no-python']
+brew 'mysql'
+
+# Development
+brew 'git'
+brew 'hub'
+brew 'rbenv'
+brew 'ruby-build'
+brew 'rbenv-gem-rehash'
+brew 'node'
+brew 'vim'
+brew 'tmux'
+
+# Open SSL
+#install openssl
+#unlink openssl
+#link openssl --force
+
+# Readline
+#install readline
+#unlink readline
+#link readline --force
+
+# Casks
+cask 'github'
+cask 'spotify'
+cask 'skype'
+cask 'slack'
+cask 'vlc'
+cask 'sequel-pro'
+cask 'dropbox'
+cask 'google-drive'
+cask 'insomniax'
