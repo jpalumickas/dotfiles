@@ -12,8 +12,10 @@ then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > /tmp/homebrew-install.log
 fi
 
+brew tap Homebrew/bundle
+
 # Run Homebrew bundle.
-brew bundle $ZSH/homebrew/Brewfile
+brew bundle --global
 
 # Remove outdated versions from the cellar
 brew cleanup

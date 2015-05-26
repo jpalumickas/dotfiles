@@ -4,6 +4,7 @@
 tap 'caskroom/cask'
 tap 'thoughtbot/formulae' # Used for: pick
 tap 'Goles/battery' # Used for: battery
+tap 'homebrew/services'
 
 # First ones
 brew 'cmake'
