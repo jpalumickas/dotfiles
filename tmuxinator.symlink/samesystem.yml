@@ -1,0 +1,35 @@
+# ~/.tmuxinator/samesystem.yml
+
+name: samesystem
+root: ~/Projects/SameSystem/samesystem
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+pre:
+  - "ps auxwwwe | grep samesystem | grep rails | grep -v grep | awk '{print $2}' | xargs kill -9"
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - terminal: #clear
+  - editor: vim
+  - logs:
+      layout: 610a,178x51,0,0{89x51,0,0,2,88x51,90,0[88x25,90,0,5,88x25,90,26,6]}
+      panes:
+        - tail -f log/development.log
+        - tail -f log/application.log
+        -
+  - servers:
+      layout: main-vertical
+      panes:
+        - rs
+        - rsc
