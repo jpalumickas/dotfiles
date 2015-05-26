@@ -3,7 +3,8 @@
     fontFamily: "Menlo"
     fontSize: 15
     showIndentGuide: true
-    invisibles: {}
+    invisibles:
+      {}
   core:
     ignoredNames: [
       ".DS_Store"
@@ -11,8 +12,6 @@
       ".git"
     ]
     disabledPackages: [
-      "metrics"
-      "vim-mode"
       "preview-tabs"
       "script"
     ]
@@ -39,6 +38,9 @@
     rubocopExecutablePath: "/Users/justas/.rbenv/shims/"
   "linter-scss-lint":
     scssLintExecutablePath: "/Users/justas/.rbenv/shims/"
-  linter: {}
+  linter:
+    {}
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
