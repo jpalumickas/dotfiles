@@ -1,0 +1,5 @@
+[applications_to_ignore]
+skype
+tmux
+tmuxinator
+vim
