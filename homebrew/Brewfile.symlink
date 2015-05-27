@@ -27,6 +27,7 @@ brew 'tree'
 brew 'ssh-copy-id'
 brew 'pick'
 brew 'battery'
+brew 'chromedriver'
 
 # Databases
 brew 'redis'
