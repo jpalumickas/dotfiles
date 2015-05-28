@@ -1,0 +1,3 @@
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'ctrl-h': 'window:focus-previous-pane'
+  'ctrl-l': 'window:focus-next-pane'
