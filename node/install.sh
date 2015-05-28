@@ -1,7 +1,3 @@
-# Developer tools
-npm install -g grunt-cli
-npm install -g bower
-
 # Code linters
 npm install -g coffeelint # CoffeeScript linter.
 npm install -g jshint # JavaScript linter.

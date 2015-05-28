@@ -24,3 +24,12 @@ then
 fi
 
 heroku plugins:install git://github.com/ddollar/heroku-config.git
+
+
+# rbenv-default-gems
+rbenv_default_gems_dir=~/.rbenv/plugins/rbenv-default-gems
+
+if [ ! -d "$rbenv_default_gems_dir" ]; then
+  echo "  Installing rbenv-default-gems for you."
+  git clone https://github.com/sstephenson/rbenv-default-gems.git $rbenv_default_gems_dir
+fi

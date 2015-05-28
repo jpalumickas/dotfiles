@@ -135,6 +135,10 @@ install_dotfiles () {
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
+}
+
+symlink_last () {
+  local overwrite_all=false backup_all=false skip_all=false
 
   link_file "$DOTFILES_ROOT/ruby/rbenv/default-gems" "$HOME/.rbenv/default-gems"
 }
@@ -153,6 +157,8 @@ then
     fail "error installing dependencies"
   fi
 fi
+
+symlink_last
 
 echo ''
 echo '  All installed!'

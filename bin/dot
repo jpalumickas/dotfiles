@@ -9,8 +9,7 @@ export ZSH=$HOME/.dotfiles
 # Set OS X defaults
 $ZSH/osx/set-defaults.sh
 
-# Upgrade homebrew and Install homebrew packages
-brew bundle --global
-
 # Install other packages
+$ZSH/homebrew/install.sh 2>&1
 $ZSH/ruby/install.sh 2>&1
+$ZSH/node/install.sh 2>&1
