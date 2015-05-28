@@ -4,7 +4,7 @@
 
 BACKUPS_SERVER = '192.168.0.50'
 
-BACKUPS_PATH = "#{ENV['HOME']}/Projects/SameSystem/db_backups"
+BACKUPS_PATH = "/tmp/samesystem_db_backups"
 
 EXCLUDE_FILES = %w(
   redmine*
@@ -17,6 +17,7 @@ EXCLUDE_FILES = %w(
   *delayed_jobs.sql.gz
   *email_queues.sql.gz
   *bonus_type_logs.sql.gz
+  *sessions.sql.gz
 )
 
 require 'date'
