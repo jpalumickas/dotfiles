@@ -28,6 +28,7 @@ brew 'ssh-copy-id'
 brew 'pick'
 brew 'battery'
 brew 'chromedriver'
+brew 'ffmpeg'
 
 # Databases
 brew 'redis'
