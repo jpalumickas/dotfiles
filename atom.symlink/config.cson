@@ -15,10 +15,6 @@
       "preview-tabs"
       "script"
     ]
-    themes: [
-      "atom-dark-ui"
-      "base16-ocean-dark-spacegray"
-    ]
     projectHome: "/Users/justas/Projects"
   "spell-check":
     grammars: [
