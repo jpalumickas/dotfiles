@@ -11,6 +11,8 @@
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
+echo "Setting Mouse and Keyboard preferences"
+
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
 
@@ -25,6 +27,8 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
+
+echo "Setting Finder preferences"
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -62,9 +66,28 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 
+# Set Desktop as the default location for new Finder windows
+# For other paths, use `PfLo` and `file:///full/path/here/`
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
+
+
+###############################################################################
+# Screen                                                                      #
+###############################################################################
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
+
+echo "Setting Dock and Dashboard preferences"
 
 # Hot corners
 # Possible values:
@@ -85,6 +108,8 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
+
+echo "Setting Safari preferences"
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
@@ -110,8 +135,28 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Terminal                                                                    #
 ###############################################################################
 
+echo "Setting Terminal preferences"
+
 defaults write com.apple.terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
 
 # Disable CMD+/ in iTerm
 defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add "Find Cursor" nil
+
+###############################################################################
+# Calendar                                                                    #
+###############################################################################
+
+echo "Setting Calendar preferences"
+
+# Show week numbers (10.8 only)
+defaults write com.apple.iCal "Show Week Numbers" -bool true
+
+# Show 7 days
+defaults write com.apple.iCal "n days of week" -int 7
+
+# Week starts on monday
+defaults write com.apple.iCal "first day of week" -int 1
+
+# Show event times
+defaults write com.apple.iCal "Show time in Month View" -bool true
