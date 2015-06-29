@@ -3,8 +3,7 @@
     fontFamily: "Menlo"
     fontSize: 15
     showIndentGuide: true
-    invisibles:
-      {}
+    invisibles: {}
   core:
     ignoredNames: [
       ".DS_Store"
@@ -35,7 +34,7 @@
   "linter-scss-lint":
     scssLintExecutablePath: "/Users/justas/.rbenv/shims/"
   linter:
-    {}
+    showErrorPanel: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
   "vim-mode":
