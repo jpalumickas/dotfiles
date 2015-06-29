@@ -25,6 +25,8 @@ augroup vimrcEx
 
   " Disable wrap on some languages
   autocmd BufRead,BufNewFile *.slim setlocal textwidth=0
+  autocmd BufRead,BufNewFile *.erb setlocal textwidth=0
+  autocmd BufRead,BufNewFile *.html setlocal textwidth=0
 
   " Automatically wrap at 72 characters and spell check git commit messages
   autocmd FileType gitcommit setlocal textwidth=72
@@ -46,4 +48,6 @@ augroup vimrcEx
   " Make those debugger statements painfully obvious
   au BufEnter *.rb syn match error contained "\<binding.pry\>"
   au BufEnter *.rb syn match error contained "\<debugger\>"
+  au BufEnter *.js syn match error contained "\<debugger\>"
+  au BufEnter *.coffee syn match error contained "\<debugger\>"
 augroup END
