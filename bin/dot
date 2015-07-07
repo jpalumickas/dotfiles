@@ -13,3 +13,4 @@ $ZSH/osx/set-defaults.sh
 $ZSH/homebrew/install.sh 2>&1
 $ZSH/ruby/install.sh 2>&1
 $ZSH/node/install.sh 2>&1
+$ZSH/zsh/install.sh 2>&1
