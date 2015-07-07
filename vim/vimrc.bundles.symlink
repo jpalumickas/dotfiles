@@ -27,8 +27,6 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/tComment'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'chriskempson/base16-vim' " Base16 Colors
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'jtratner/vim-flavored-markdown' " GitHub markdown
 Plugin 'rking/ag.vim' " For searching
 Plugin 'kana/vim-textobj-user'
@@ -51,6 +49,11 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'wellle/tmux-complete.vim'
 Plugin 'benmills/vimux'
+
+" Color Schemes
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim' " Base16 Colors
+Plugin 'morhetz/gruvbox'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
