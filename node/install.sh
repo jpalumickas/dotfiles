@@ -1,6 +1,7 @@
 # Code linters
 npm install -g coffeelint # CoffeeScript linter.
 npm install -g jshint # JavaScript linter.
+npm install -g jsxhint # JSX linter.
 npm install -g csslint # CSS linter.
 npm install -g bootlint # Bootstrap linter.
 
