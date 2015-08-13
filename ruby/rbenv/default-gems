@@ -1,8 +1,7 @@
 bundler
 rubocop
-scss-lint
+scss_lint
 byebug
-debugger
 rubycritic
 flog
 flay
