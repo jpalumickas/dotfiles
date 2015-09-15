@@ -4,6 +4,9 @@ npm install -g jshint # JavaScript linter.
 npm install -g jsxhint # JSX linter.
 npm install -g csslint # CSS linter.
 npm install -g bootlint # Bootstrap linter.
+npm install -g eslint
+npm install -g babel-eslint
+npm install -g eslint-plugin-react
 
 # Utilities
 npm install -g public-ip # Show public ip.
