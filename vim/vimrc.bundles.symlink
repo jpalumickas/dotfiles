@@ -14,14 +14,11 @@ Plugin 'christoomey/vim-run-interactive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'scrooloose/syntastic'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise' " Here’s the useful plugin that adds end after if, do, def keywords.
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive' " GIT
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/tComment'
@@ -34,6 +31,15 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'gorodinskiy/vim-coloresque'
 
+" Go
+Plugin 'fatih/vim-go'
+
+" Ruby
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-bundler'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'prophittcorey/vim-flay'
+
 " Syntax
 Plugin 'tpope/vim-cucumber'
 Plugin 'slim-template/vim-slim'
@@ -42,6 +48,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'elzr/vim-json'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
