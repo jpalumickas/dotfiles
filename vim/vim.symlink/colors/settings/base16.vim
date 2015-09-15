@@ -1,5 +1,5 @@
 let base16colorspace=256
-colorscheme base16-eighties
+colorscheme base16-ocean
 
 highlight VertSplit ctermfg=8 ctermbg=235
 highlight StatusLineNC ctermfg=235 ctermbg=3
