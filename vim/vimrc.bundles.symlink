@@ -62,6 +62,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim' " Base16 Colors
 Plugin 'morhetz/gruvbox'
 
+" Chef
+Plugin 'dougireton/vim-chef'
+
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif
