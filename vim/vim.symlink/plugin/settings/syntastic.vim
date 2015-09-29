@@ -19,3 +19,4 @@ let g:syntastic_slim_checkers = ['slimrb']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_chef_checkers = ['foodcritic']
 
+let g:syntastic_ruby_rubocop_exec = '~/.rbenv/shims/rubocop'
