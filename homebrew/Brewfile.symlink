@@ -29,6 +29,7 @@ brew 'pick'
 brew 'battery'
 brew 'chromedriver'
 brew 'ffmpeg'
+brew 'md5sha1sum'
 
 # Databases
 brew 'redis'
