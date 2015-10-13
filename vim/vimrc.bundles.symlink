@@ -9,7 +9,12 @@ call vundle#begin()
 " Let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
 
+" Utilities
+Plugin 'SirVer/ultisnips'
+
+
 " Define bundles via Github repos
+Plugin 'tpope/vim-dispatch'
 Plugin 'christoomey/vim-run-interactive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pbrisbin/vim-mkdir'
@@ -30,25 +35,27 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'honza/vim-snippets'
 
 " Go
 Plugin 'fatih/vim-go'
 
 " Ruby
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'prophittcorey/vim-flay'
+Plugin 'tpope/vim-rails'
 
 " Syntax
 Plugin 'tpope/vim-cucumber'
 Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-rails'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
+Plugin 'isRuslan/vim-es6'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
