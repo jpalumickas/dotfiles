@@ -30,7 +30,7 @@
   "exception-reporting":
     userId: "a16fb11c-80f5-993c-dac9-27e736ff535e"
   "linter-rubocop":
-    executablePath: "/Users/jpalumickas/.rbenv/shims"
+    command: "/Users/jpalumickas/.rbenv/shims"
   "linter-scss-lint":
     scssLintExecutablePath: "/Users/jpalumickas/.rbenv/shims/"
   linter:
