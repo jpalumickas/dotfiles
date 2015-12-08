@@ -1,7 +1,7 @@
 {
   "basic": true,
   "verbose": true,
-  "socket": "/tmp/mysql.sock -uroot",
+  "socket": "/tmp/mysql.sock",
   "skip_data": [
     "redmine*",
     "metadata*",
