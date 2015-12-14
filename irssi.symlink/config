@@ -1,0 +1,54 @@
+servers = (
+  {
+    chatnet = "freenode";
+    address = "irc.freenode.net";
+    port = "6667";
+    autoconnect = "yes";
+  }
+);
+
+chatnets = {
+  freenode = {
+    real_name = "Justas";
+    user_name = "jpalumickas";
+    type = "IRC";
+    nick = "jpalumickas";
+  };
+};
+
+channels = (
+  { name = "#github"; chatnet = "freenode"; autojoin = "yes"; }
+);
+
+aliases = {
+  WC = "window close";
+  reg = "/msg NickServ IDENTIFY";
+};
+
+settings = {
+
+  "perl/core/scripts" = {
+    ### For Solarized adv_windowlist.pl script
+    awl_display_key_active = "%k%2[$Q=$N:$C]%n";
+    awl_display_nokey_active = "%k%2[$N:$C]%n";
+    awl_display_key = "[$Q:$H$C$S]";
+    awl_display_nokey = "[$N:$H$C$S]";
+
+    ### For Solarized trackbar.pl script
+    trackbar_style = "%B";
+  };
+
+  "fe-text" = {
+    indent = "2";
+    actlist_sort = "refnum";
+  };
+
+  "fe-common/core" = {
+    theme = "solarized";
+    hilight_color = "= %R";
+    autolog = "yes";
+    term_charset = "utf-8";
+    autolog_ignore_targets = "ChanServ NickServ";
+  };
+};
+logs = { };
