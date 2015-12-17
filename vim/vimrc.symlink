@@ -157,9 +157,10 @@ source ~/.vim/colors/settings/global.vim
 
 " Solorized
 " source ~/.vim/colors/settings/solorized.vim
+source ~/.vim/colors/settings/solorized-light.vim
 
 " Base16
-source ~/.vim/colors/settings/base16.vim
+" source ~/.vim/colors/settings/base16.vim
 
 " Gruvbox
 " source ~/.vim/colors/settings/gruvbox.vim

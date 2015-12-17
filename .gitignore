@@ -26,3 +26,5 @@ vim/vim.symlink/bundle
 
 # Bin
 bin/pgweb
+
+irssi.symlink/config.autosave
