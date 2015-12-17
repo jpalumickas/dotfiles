@@ -19,6 +19,7 @@
         current-branch = !sh -c 'git rev-parse --abbrev-ref HEAD' -
         rename-branch = !sh -c 'old=$(git current-branch) && git branch -m $old $1 && git push origin --set-upstream $1 && git push origin --delete $old' -
         create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+        sync = !$ZSH/bin/git-sync
 [color]
         diff = auto
         status = auto
