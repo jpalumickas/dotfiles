@@ -41,6 +41,7 @@ unset config_files
 
 # Add bin to front of the PATH
 export PATH="./bin:$PATH"
+export PATH="$(consolidate-path "$PATH")"
 
 # Base16 Shell
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
