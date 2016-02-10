@@ -1,50 +1,53 @@
 #update
 
+cask_args appdir: '/Applications'
+
 # Taps
+tap 'Goles/battery' # Used for: battery
+tap 'Homebrew/bundle'
+tap 'Homebrew/services'
 tap 'caskroom/cask'
 tap 'thoughtbot/formulae' # Used for: pick
-tap 'Goles/battery' # Used for: battery
-tap 'homebrew/services'
 
 # First ones
 brew 'cmake'
 
 # Utilities
-brew 'mackup' # Auto backup settings
-brew 'sqlite'
-brew 'grc'
-brew 'wget', args: ['enable-iri']
-brew 'coreutils'
-brew 'spark'
-brew 'the_silver_searcher' # Faster search than ack
-brew 'ctags'
-brew 'imagemagick'
-brew 'qt' # used by Capybara Webkit for headless Javascript integration testing
-brew 'watch'
-brew 'reattach-to-user-namespace' # Tmux clipboard
 brew 'ack'
-brew 'tree'
-brew 'ssh-copy-id'
-brew 'pick'
 brew 'battery'
 brew 'chromedriver'
+brew 'coreutils'
+brew 'ctags'
 brew 'ffmpeg'
+brew 'grc'
+brew 'imagemagick'
+brew 'mackup' # Auto backup settings
 brew 'md5sha1sum'
+brew 'pick'
+brew 'qt' # used by Capybara Webkit for headless Javascript integration testing
+brew 'reattach-to-user-namespace' # Tmux clipboard
+brew 'spark'
+brew 'sqlite'
+brew 'ssh-copy-id'
+brew 'the_silver_searcher' # Faster search than ack
+brew 'tree'
+brew 'watch'
+brew 'wget', args: ['enable-iri']
 
 # Databases
-brew 'redis'
-brew 'postgres', args: ['no-python']
 brew 'mysql'
+brew 'postgres', args: ['no-python']
+brew 'redis'
 
 # Development
 brew 'git'
 brew 'hub'
-brew 'rbenv'
-brew 'ruby-build'
-brew 'rbenv-gem-rehash'
 brew 'node'
-brew 'vim'
+brew 'rbenv'
+brew 'rbenv-gem-rehash'
+brew 'ruby-build'
 brew 'tmux'
+brew 'vim'
 
 # Open SSL
 #install openssl
@@ -57,12 +60,18 @@ brew 'tmux'
 #link readline --force
 
 # Casks
-cask 'github'
-cask 'spotify'
-cask 'skype'
-cask 'slack'
-cask 'vlc'
-cask 'sequel-pro'
+cask '1password'
+cask 'atom'
 cask 'dropbox'
+cask 'github'
+cask 'google-chrome'
 cask 'google-drive'
 cask 'insomniax'
+cask 'sequel-pro'
+cask 'skype'
+cask 'slack'
+cask 'spotify'
+cask 'steam'
+cask 'transmission'
+cask 'tunnelbear'
+cask 'vlc'
