@@ -1,41 +1,41 @@
 "*":
-  editor:
-    fontFamily: "Menlo"
-    fontSize: 15
-    showIndentGuide: true
-    invisibles: {}
   core:
+    disabledPackages: [
+      "preview-tabs"
+      "script"
+    ]
     ignoredNames: [
       ".DS_Store"
       ".bundle"
       ".git"
     ]
-    disabledPackages: [
-      "preview-tabs"
-      "script"
-    ]
     projectHome: "/Users/justas/Projects"
+  editor:
+    fontFamily: "Menlo"
+    fontSize: 15
+    invisibles: {}
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "a16fb11c-80f5-993c-dac9-27e736ff535e"
+  linter:
+    showErrorPanel: false
+  "linter-rubocop":
+    command: "/Users/jpalumickas/.rbenv/shims"
+  "linter-scss-lint":
+    scssLintExecutablePath: "/Users/jpalumickas/.rbenv/shims/"
+  "release-notes":
+    viewedVersion: "0.95.0"
   "spell-check":
     grammars: [
       "text.plain"
       "source.gfm"
       "text.git-commit"
     ]
-  welcome:
-    showOnStartup: false
-  "release-notes":
-    viewedVersion: "0.95.0"
   "tree-view":
     hideIgnoredNames: true
-  "exception-reporting":
-    userId: "a16fb11c-80f5-993c-dac9-27e736ff535e"
-  "linter-rubocop":
-    command: "/Users/jpalumickas/.rbenv/shims"
-  "linter-scss-lint":
-    scssLintExecutablePath: "/Users/jpalumickas/.rbenv/shims/"
-  linter:
-    showErrorPanel: false
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
   "vim-mode":
     useClipboardAsDefaultRegister: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
