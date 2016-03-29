@@ -11,6 +11,7 @@
     ]
     projectHome: "/Users/justas/Projects"
   editor:
+    backUpBeforeSaving: true
     fontFamily: "Menlo"
     fontSize: 15
     invisibles: {}
