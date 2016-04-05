@@ -1,0 +1,15 @@
+#!/bin/bash
+
+NPM_BIN=$(npm bin)
+if [ -f $"$NPM_BIN/$1" ];
+then
+  "$NPM_BIN/$@"
+else
+  NPM_GLOBAL_BIN=$(npm bin -g)
+  if [ -f $"$NPM_GLOBAL_BIN/$1" ];
+  then
+    "$NPM_GLOBAL_BIN/$@"
+  else
+    echo "There are no specified command $1 in NPM."
+  fi
+fi

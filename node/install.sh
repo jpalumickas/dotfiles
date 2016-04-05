@@ -1,13 +1,13 @@
 # Code linters
-npm install -g babel-eslint
-npm install -g bootlint # Bootstrap linter.
-npm install -g coffeelint # CoffeeScript linter.
-npm install -g csslint # CSS linter.
-npm install -g eslint
-npm install -g eslint-config-airbnb
-npm install -g eslint-plugin-react
-npm install -g jshint # JavaScript linter.
-npm install -g jsxhint # JSX linter.
+npm uninstall -g babel-eslint
+npm uninstall -g bootlint # Bootstrap linter.
+npm uninstall -g coffeelint # CoffeeScript linter.
+npm uninstall -g csslint # CSS linter.
+npm uninstall -g eslint
+npm uninstall -g eslint-config-airbnb
+npm uninstall -g eslint-plugin-react
+npm uninstall -g jshint # JavaScript linter.
+npm uninstall -g jsxhint # JSX linter.
 
 # Utilities
 npm install -g public-ip # Show public ip.

@@ -9,7 +9,6 @@
     "*calendar_line_logs",
     "*fragment_logs",
     "*log_records",
-    "*log_user_changes",
     "*delayed_jobs",
     "*email_queues",
     "*bonus_type_logs",
