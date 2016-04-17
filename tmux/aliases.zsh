@@ -1,4 +1,5 @@
-alias ta='tmux attach'
+alias ta='tmux attach -t'
 alias td='tmux detach'
 alias tk='tmux kill-session -t'
 alias tls='tmux ls'
+alias tn='tmux new -s'
