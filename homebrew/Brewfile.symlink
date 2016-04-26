@@ -6,7 +6,6 @@ cask_args appdir: '/Applications'
 tap 'Goles/battery' # Used for: battery
 tap 'Homebrew/bundle'
 tap 'Homebrew/services'
-tap 'caskroom/cask'
 tap 'thoughtbot/formulae' # Used for: pick
 
 # First ones
