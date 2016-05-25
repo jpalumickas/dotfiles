@@ -46,3 +46,5 @@ export PATH="$(consolidate-path "$PATH")"
 # Base16 Shell
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
 # [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
