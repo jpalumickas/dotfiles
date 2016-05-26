@@ -19,6 +19,9 @@ let g:syntastic_slim_checkers = ['slimrb']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_chef_checkers = ['foodcritic']
 
+" Do not show excluded files in RuboCop
+let g:syntastic_ruby_rubocop_args = '--force-exclusion'
+
 " Make ESlint to run local npm
 let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
 let g:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
