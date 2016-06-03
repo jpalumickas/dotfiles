@@ -30,6 +30,7 @@ brew 'ssh-copy-id'
 brew 'the_silver_searcher' # Faster search than ack
 brew 'tree'
 brew 'watch'
+brew 'heroku'
 brew 'wget', args: ['enable-iri']
 
 # Databases
@@ -41,7 +42,7 @@ brew 'redis'
 brew 'git'
 brew 'hub'
 brew 'node'
-brew 'rbenv'
+brew 'rbenv', args: ['HEAD']
 brew 'ruby-build'
 brew 'tmux'
 brew 'vim'

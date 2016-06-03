@@ -16,11 +16,11 @@ fi
 
 # === Heroku
 
-if test ! $(which heroku)
+if heroku plugins | grep -q "heroku-config";
 then
-  echo_info "  Installing heroku-toolbelt for you."
-  brew install heroku-toolbelt
-
+  echo_info "  Updating heroku-config plugin for you."
+  heroku plugins:update heroku-config
+else
   echo_info "  Installing heroku-config plugin for you."
   heroku plugins:install git://github.com/ddollar/heroku-config.git
 fi
