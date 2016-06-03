@@ -15,6 +15,9 @@ fi
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 
+# Add Homebrew path before
+export PATH="/usr/local/bin:$PATH"
+
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do

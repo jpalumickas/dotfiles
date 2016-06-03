@@ -24,7 +24,4 @@ sublime/User/Package Control.system-ca-bundle
 vim/vim.symlink/.netrwhist
 vim/vim.symlink/bundle
 
-# Bin
-bin/pgweb
-
 irssi.symlink/config.autosave
