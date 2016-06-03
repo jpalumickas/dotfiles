@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Set ZSH if we're not in zsh environment.
+if [ -z "$ZSH" ]; then
+  export ZSH=$HOME/.dotfiles
+fi
+
 
 if [ "$(uname -s)" == "Darwin" ]
 then
