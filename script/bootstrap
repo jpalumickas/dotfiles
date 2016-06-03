@@ -13,5 +13,3 @@ $DOTFILES_ROOT/script/symlink
 $DOTFILES_ROOT/script/install
 echo ''
 echo '  All installed!'
-
-# symlink_last
