@@ -78,7 +78,6 @@ set-option -g message-bg colour4
 set-option -g display-time 5000
 
 ## set status bar
-set-option -g status-utf8 on
 set-option -g status-interval 1
 set-option -g status-fg colour10
 set-option -g status-bg default
@@ -131,7 +130,6 @@ set-window-option -g pane-base-index 1
 set-window-option -g window-status-format ' #I #W '
 set-window-option -g window-status-attr dim
 
-set -g mouse-utf8 on
 set -g mouse on
 bind-key -T root WheelUpPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"
 bind-key -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"
