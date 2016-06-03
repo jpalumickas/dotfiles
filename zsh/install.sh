@@ -10,3 +10,14 @@ else
   echo "  Updating base16-shell for you."
   cd $base16_shell_dir && git pull
 fi
+
+# vim bundle
+vim_bundle_dir=~/.vim/bundle
+
+if [ ! -d "$vim_bundle_dir" ]; then
+  echo "  Installing vim Vundle for you."
+  git clone https://github.com/VundleVim/Vundle.vim.git $vim_bundle_dir/Vundle.vim
+else
+  echo "  Updating vim bundle for you."
+  cd $vim_bundle_dir/Vundle.vim && git pull
+fi
