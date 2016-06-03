@@ -12382,7 +12382,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/local/bin/zsh</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -12419,7 +12419,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -13154,7 +13154,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/local/bin/zsh</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -13176,7 +13176,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -13886,7 +13886,7 @@
 			<key>Columns</key>
 			<integer>52</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/local/bin/zsh</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -13908,7 +13908,7 @@
 			<key>Cursor Type</key>
 			<integer>0</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -14623,7 +14623,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/local/bin/zsh</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -14645,7 +14645,7 @@
 			<key>Cursor Type</key>
 			<integer>0</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -15359,7 +15359,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/local/bin/zsh</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -15381,7 +15381,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -16084,7 +16084,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/local/bin/zsh</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -16106,7 +16106,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -16809,7 +16809,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/usr/local/bin/zsh</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -16831,7 +16831,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
