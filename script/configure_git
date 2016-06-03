@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#
+# configures git
+
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+
+source $DOTFILES_ROOT/install/helpers/messages.sh
+
+set -e
+
+setup_gitconfig () {
+  echo_info 'Setup gitconfig'
+
+  if ! [ -f git/gitconfig.symlink ]
+  then
+
+    git_credential='cache'
+    if [ "$(uname -s)" == "Darwin" ]
+    then
+      git_credential='osxkeychain'
+    fi
+
+    echo_question '- What is your github author name?'
+    read -e git_authorname
+    echo_question '- What is your github author email?'
+    read -e git_authoremail
+
+    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
+
+    echo_success 'Success! gitconfig configured.'
+  else
+    echo_success 'Skipping! gitconfig already exists.'
+  fi
+}
+
+echo ''
+setup_gitconfig

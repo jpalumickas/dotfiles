@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require_relative './helpers/string_colors'
+
 NODE_PACKAGES = [
   'internal-ip', # Show iternal ip.
   'is-up',       # Check whether a website is up or down.

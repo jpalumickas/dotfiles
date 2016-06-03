@@ -1,12 +1,16 @@
 #!/bin/sh
 
-# vim bundle
-vim_bundle_dir=~/.vim/bundle
+source $ZSH/install/helpers/messages.sh
 
-if [ ! -d "$vim_bundle_dir/Vundle.vim" ]; then
-  echo "  Installing vim Vundle for you."
-  git clone https://github.com/VundleVim/Vundle.vim.git $vim_bundle_dir/Vundle.vim
+# === Vundle
+
+vim_bundle_dir=~/.vim/bundle
+vundle_dir=$vim_bundle_dir/Vundle.vim
+
+if [ ! -d "$vundle_dir" ]; then
+  echo_info "  Installing vim Vundle."
+  git clone https://github.com/VundleVim/Vundle.vim.git $vundle_dir
 else
-  echo "  Updating vim bundle for you."
-  cd $vim_bundle_dir/Vundle.vim && git pull
+  echo_info "  Updating vim Vundle."
+  cd $vundle_dir && git pull
 fi

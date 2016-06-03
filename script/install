@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+# installs/updates dependencies
+
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+
+source $DOTFILES_ROOT/install/helpers/messages.sh
+
+set -e
+
+echo_info 'Installing dependencies'
+$DOTFILES_ROOT/install/install.sh

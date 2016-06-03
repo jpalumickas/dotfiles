@@ -14,6 +14,6 @@ echo_fail () {
   exit
 }
 
-echo_user () {
+echo_question () {
   printf "\r  [ \033[0;33m??\033[0m ] $1\n"
 }
