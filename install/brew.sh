@@ -10,4 +10,4 @@ brew tap Homebrew/bundle
 brew bundle --global
 
 # Remove outdated versions from the cellar
-brew cleanup
+# brew cleanup

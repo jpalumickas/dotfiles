@@ -1,11 +1,13 @@
 #!/bin/sh
 
+source $ZSH/install/helpers/messages.sh
+
 # === Homebrew
 
 # Check for Homebrew
 if test ! $(which brew)
 then
-  echo "  Installing Homebrew for you."
+  echo_info "  Installing Homebrew for you."
 
   # Install the correct homebrew for each OS type
   if test "$(uname)" = "Darwin"
@@ -16,8 +18,11 @@ then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
   fi
 
-  echo "  Installing Homebrew bundle tap."
+  echo_info "  Installing Homebrew bundle tap."
   brew tap Homebrew/bundle
+else
+  echo_info "  Updating Homebrew."
+  brew update
 fi
 
 
@@ -26,9 +31,9 @@ fi
 rbenv_default_gems_dir=~/.rbenv/plugins/rbenv-default-gems
 
 if [ ! -d "$rbenv_default_gems_dir" ]; then
-  echo "  Installing rbenv-default-gems for you."
+  echo_info "  Installing rbenv-default-gems for you."
   git clone https://github.com/sstephenson/rbenv-default-gems.git $rbenv_default_gems_dir
 else
-  echo "  Updating rbenv-default-gems for you."
+  echo_info "  Updating rbenv-default-gems for you."
   cd $rbenv_default_gems_dir && git pull
 fi

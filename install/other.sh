@@ -30,8 +30,3 @@ fi
 echo_info "  Configuring bundler jobs."
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
-
-# RBenv default gems symlink
-
-echo_info "  Symlinking rbenv default gems."
-ln -sf $ZSH/ruby/rbenv/default-gems ~/.rbenv/default-gems
