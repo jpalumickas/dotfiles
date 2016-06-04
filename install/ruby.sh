@@ -12,6 +12,7 @@ ln -sf $ZSH/ruby/rbenv/default-gems ~/.rbenv/default-gems
 # === Ruby versions
 
 ruby_versions=( 2.2.3 2.3.1 )
+ruby_global_version="2.3.1"
 
 echo_info "  Installing Ruby versions"
 
@@ -25,3 +26,6 @@ do
     echo_success "    Installed Ruby $ruby_version"
   fi
 done
+
+echo_info "    Making Ruby $ruby_global_version to be global."
+rbenv global $ruby_global_version
