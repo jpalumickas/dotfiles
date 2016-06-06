@@ -30,3 +30,12 @@ fi
 echo_info "  Configuring bundler jobs."
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
+
+# === Projects directory
+
+projects_dir=~/Projects
+
+if [[ ! -e $projects_dir ]]; then
+  mkdir $projects_dir
+  echo_success "  Created Projects directory."
+fi
