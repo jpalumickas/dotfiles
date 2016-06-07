@@ -15,21 +15,11 @@ alias path="echo $PATH | tr -s ':' '\n'"
 # Get week number
 alias week='date +%V'
 
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="/sbin/ifconfig | grep \"inet \" | grep -v 127.0.0.1 | cut -d ' ' -f2" #"ipconfig getifaddr en1"
-alias macaddress="/sbin/ifconfig | grep en0 -B 10 | grep ether | cut -d ' ' -f2"
-
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 # Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# Projects
-alias ss="c SameSystem/samesystem"
-
-alias testas="cd ~/quest && clear && ruby parser.rb"
+alias dscleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # OS X restarts
 alias rrfinder="killall -KILL Finder"
