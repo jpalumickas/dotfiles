@@ -1,3 +1,7 @@
+#!/bin/sh
+
+source $ZSH/install/helpers/messages.sh
+
 # Sets reasonable OS X defaults.
 #
 # Or, in other words, set shit how I like in OS X.
@@ -11,7 +15,8 @@
 # General UI/UX                                                               #
 ###############################################################################
 
-echo "Setting General UI/UX preferences"
+echo_info "  Configuring OSX..."
+echo_info "    Setting General UI/UX preferences"
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -42,7 +47,7 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-echo "Setting Mouse and Keyboard preferences"
+echo_info "    Setting Mouse and Keyboard preferences"
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -65,7 +70,7 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 # Finder                                                                      #
 ###############################################################################
 
-echo "Setting Finder preferences"
+echo_info "    Setting Finder preferences"
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -119,7 +124,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Screen                                                                      #
 ###############################################################################
 
-echo "Setting Screen preferences"
+echo_info "    Setting Screen preferences"
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -138,7 +143,7 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
-echo "Setting Dock and Dashboard preferences"
+echo_info "    Setting Dock and Dashboard preferences"
 
 # Hot corners
 # Possible values:
@@ -160,7 +165,7 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Safari & WebKit                                                             #
 ###############################################################################
 
-echo "Setting Safari preferences"
+echo_info "    Setting Safari preferences"
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
@@ -186,7 +191,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Terminal & iTerm 2                                                          #
 ###############################################################################
 
-echo "Setting Terminal preferences"
+echo_info "    Setting Terminal preferences"
 
 defaults write com.apple.terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
@@ -194,17 +199,14 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Disable CMD+/ in iTerm
-defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add "Find Cursor" nil
-
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+# Set configuration folder
+defaults write com.googlecode.iterm2 PrefsCustomFolder "~/.dotfiles/iterm"
 
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
 
-echo "Setting Time Machine preferences"
+echo_info "    Setting Time Machine preferences"
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
@@ -216,7 +218,7 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 # Calendar                                                                    #
 ###############################################################################
 
-echo "Setting Calendar preferences"
+echo_info "    Setting Calendar preferences"
 
 # Show week numbers (10.8 only)
 defaults write com.apple.iCal "Show Week Numbers" -bool true
@@ -235,7 +237,7 @@ defaults write com.apple.iCal "Show time in Month View" -bool true
 # Spotlight                                                                   #
 ###############################################################################
 
-echo "Setting Spotlight preferences"
+echo_info "    Setting Spotlight preferences"
 
 # Hide Spotlight tray-icon (and subsequent helper)
 #sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
@@ -244,44 +246,3 @@ echo "Setting Spotlight preferences"
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-
-# Change indexing order and disable some search results
-# Yosemite-specific search results (remove them if you are using OS X 10.9 or older):
-# 	MENU_DEFINITION
-# 	MENU_CONVERSION
-# 	MENU_EXPRESSION
-# 	MENU_SPOTLIGHT_SUGGESTIONS (send search queries to Apple)
-# 	MENU_WEBSEARCH             (send search queries to Apple)
-# 	MENU_OTHER
-defaults write com.apple.spotlight orderedItems -array \
-	'{"enabled" = 1;"name" = "APPLICATIONS";}' \
-	'{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
-	'{"enabled" = 1;"name" = "DIRECTORIES";}' \
-	'{"enabled" = 1;"name" = "PDF";}' \
-	'{"enabled" = 1;"name" = "FONTS";}' \
-	'{"enabled" = 0;"name" = "DOCUMENTS";}' \
-	'{"enabled" = 0;"name" = "MESSAGES";}' \
-	'{"enabled" = 0;"name" = "CONTACT";}' \
-	'{"enabled" = 0;"name" = "EVENT_TODO";}' \
-	'{"enabled" = 0;"name" = "IMAGES";}' \
-	'{"enabled" = 0;"name" = "BOOKMARKS";}' \
-	'{"enabled" = 0;"name" = "MUSIC";}' \
-	'{"enabled" = 0;"name" = "MOVIES";}' \
-	'{"enabled" = 0;"name" = "PRESENTATIONS";}' \
-	'{"enabled" = 0;"name" = "SPREADSHEETS";}' \
-	'{"enabled" = 0;"name" = "SOURCE";}' \
-	'{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
-	'{"enabled" = 0;"name" = "MENU_OTHER";}' \
-	'{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
-	'{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
-	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
-	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
-
-# Load new settings before rebuilding the index
-killall mds > /dev/null 2>&1
-
-# Make sure indexing is enabled for the main volume
-sudo mdutil -i on / > /dev/null
-
-# Rebuild the index from scratch
-sudo mdutil -E / > /dev/null
