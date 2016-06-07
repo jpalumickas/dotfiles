@@ -58,6 +58,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Disable Auto spelling correction
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
