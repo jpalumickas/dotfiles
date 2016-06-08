@@ -41,7 +41,7 @@ brew 'redis'
 # Development
 brew 'git'
 brew 'hub'
-brew 'node'
+brew 'nvm'
 brew 'rbenv', args: ['HEAD']
 brew 'ruby-build'
 brew 'tmux'
