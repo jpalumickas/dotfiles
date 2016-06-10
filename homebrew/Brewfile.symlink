@@ -10,6 +10,7 @@ tap 'thoughtbot/formulae' # Used for: pick
 
 # First ones
 brew 'cmake'
+brew 'zsh'
 
 # Utilities
 brew 'ack'
