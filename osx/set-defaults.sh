@@ -202,6 +202,9 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Set configuration folder
 defaults write com.googlecode.iterm2 PrefsCustomFolder "~/.dotfiles/iterm"
 
+# Load custom settings from folder
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
