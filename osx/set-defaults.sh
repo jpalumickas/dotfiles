@@ -66,6 +66,9 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Disable Auto spelling correction
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
+defaults write NSGlobalDomain AppleLanguages -array "en" "lt"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -145,6 +148,15 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 
 echo_info "    Setting Dock and Dashboard preferences"
 
+# Dock items size
+defaults write com.apple.dock tilesize -int 51
+
+# Enable magnification
+defaults write com.apple.dock magnification -bool true
+
+# Magnification size
+defaults write com.apple.dock tilesize -int 72
+
 # Hot corners
 # Possible values:
 #  0: no-op
@@ -160,6 +172,7 @@ echo_info "    Setting Dock and Dashboard preferences"
 # Run the screensaver if we're in the bottom-left hot corner.
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
+
 
 ###############################################################################
 # Safari & WebKit                                                             #
