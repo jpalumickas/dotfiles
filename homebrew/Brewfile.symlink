@@ -61,6 +61,7 @@ brew 'vim'
 # Casks
 cask '1password'
 cask 'atom'
+cask 'dash'
 cask 'dropbox'
 cask 'github-desktop'
 cask 'google-chrome'
