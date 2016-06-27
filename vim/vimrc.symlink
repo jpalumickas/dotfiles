@@ -156,7 +156,7 @@ set statusline+=\                               " Set ending space
 source ~/.vim/colors/settings/global.vim
 
 " Solorized
-source ~/.vim/colors/settings/solorized.vim
+" source ~/.vim/colors/settings/solorized.vim
 " source ~/.vim/colors/settings/solorized-light.vim
 
 " Base16
@@ -165,6 +165,8 @@ source ~/.vim/colors/settings/solorized.vim
 " Gruvbox
 " source ~/.vim/colors/settings/gruvbox.vim
 
+" One Dark
+source ~/.vim/colors/settings/onedark.vim
 
 " Additional settings
 " ===================

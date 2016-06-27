@@ -44,7 +44,6 @@ Plugin 'fatih/vim-go'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
-Plugin 'prophittcorey/vim-flay'
 Plugin 'tpope/vim-rails'
 
 " Syntax
@@ -56,6 +55,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 Plugin 'isRuslan/vim-es6'
+Plugin 'sheerun/vim-polyglot' " A collection of language packs.
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
@@ -68,6 +68,7 @@ Plugin 'benmills/vimux'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim' " Base16 Colors
 Plugin 'morhetz/gruvbox'
+Plugin 'joshdick/onedark.vim'
 
 " Chef
 Plugin 'dougireton/vim-chef'
