@@ -48,6 +48,7 @@ Plugin 'tpope/vim-rails'
 
 " Syntax
 Plugin 'tpope/vim-cucumber'
+Plugin 'pangloss/vim-javascript'
 Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
