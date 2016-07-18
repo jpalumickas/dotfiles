@@ -58,6 +58,11 @@ syntax sync fromstart
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=1200
 
+if &term =~ '256color'
+  " disable Background Color Erase (BCE)
+  set t_ut=
+endif
+
 set t_Co=256
 
 " Mouse
