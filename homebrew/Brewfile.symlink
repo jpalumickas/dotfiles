@@ -59,8 +59,9 @@ brew 'vim'
 #link readline --force
 
 # Casks
-cask '1password'
+# cask '1password'
 cask 'atom'
+cask 'cyberduck'
 cask 'dash'
 cask 'dropbox'
 cask 'github-desktop'
