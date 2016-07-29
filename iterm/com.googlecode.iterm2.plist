@@ -12145,12 +12145,16 @@
 		<key>Find Cursor</key>
 		<string>nil</string>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>894 97 445 77 0 0 2560 1080 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>853 577 606 456 0 0 2560 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 537 620 392 0 0 2560 1080 </string>
+	<string>970 532 620 392 0 0 2560 1080 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>385 301 796 473 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 68 730 552 0 0 2560 1057 </string>
+	<string>0 64 730 552 0 0 2560 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 425 570 452 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -14974,7 +14978,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 15</string>
+			<string>Monaco 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -17419,7 +17423,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-27T11:39:01Z</date>
+	<date>2016-07-28T14:56:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -17478,7 +17482,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.2</string>
+	<string>3.0.5</string>
 	<key>kCommandHistoryHasEverBeenUsed</key>
 	<true/>
 </dict>
