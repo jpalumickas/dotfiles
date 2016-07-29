@@ -36,6 +36,7 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'honza/vim-snippets'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Go
 Plugin 'fatih/vim-go'
