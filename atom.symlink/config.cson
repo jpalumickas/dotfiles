@@ -21,9 +21,9 @@
   linter:
     showErrorPanel: false
   "linter-rubocop":
-    command: "/Users/jpalumickas/.rbenv/shims"
+    command: "/Users/jpalumickas/.rbenv/shims/rubocop"
   "linter-scss-lint":
-    scssLintExecutablePath: "/Users/jpalumickas/.rbenv/shims/"
+    scssLintExecutablePath: "/Users/jpalumickas/.rbenv/shims/scss-lint"
   "release-notes":
     viewedVersion: "0.95.0"
   "spell-check":
@@ -31,6 +31,7 @@
       "text.plain"
       "source.gfm"
       "text.git-commit"
+      "text.html.basic"
     ]
   "tree-view":
     hideIgnoredNames: true
