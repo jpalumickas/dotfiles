@@ -1,13 +1,14 @@
-atom-beautify@0.29.11
+atom-beautify@0.29.12
 color-picker@2.2.2
 git-time-machine@1.5.3
 language-docker@1.1.7
 linter@1.11.16
 linter-docker@0.1.2
-linter-eslint@7.2.4
+linter-eslint@7.3.2
 linter-rubocop@0.4.7
-linter-sass-lint@1.7.0
-qolor@0.2.2
+linter-sass-lint@1.7.1
+pretty-json@1.6.0
+qolor@0.4.0
 react@0.16.0
 sort-lines@0.14.0
 

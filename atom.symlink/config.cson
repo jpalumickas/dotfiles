@@ -1,4 +1,9 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "64cdcc02-ff9d-4a4c-abe9-9df0e0968769"
+    html:
+      indent_size: 2
   core:
     disabledPackages: [
       "preview-tabs"
