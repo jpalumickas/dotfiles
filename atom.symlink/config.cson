@@ -15,6 +15,7 @@
       ".git"
     ]
     projectHome: "/Users/justas/Projects"
+    telemetryConsent: "limited"
   editor:
     backUpBeforeSaving: true
     fontFamily: "Menlo"
