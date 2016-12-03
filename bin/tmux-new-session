@@ -5,12 +5,12 @@ projects_dir = ENV['PROJECTS']
 
 if current_dir != projects_dir && current_dir.include?(projects_dir)
   project_dir = current_dir.sub("#{projects_dir}/", '')
-  tmux_name = project_dir.gsub('/', '-')
+  tmux_name = project_dir.tr('/', '-')
 else
-  tmux_name = current_dir.split('/').last.gsub('/', '-')
+  tmux_name = current_dir.split('/').last.tr('/', '-')
 end
 
-tmux_name = tmux_name.gsub(/[^0-9a-z\-]/i, '').downcase
+tmux_name = tmux_name.gsub(/[^0-9a-z\-\_]/i, '').downcase
 
 tmux_current_sessions = `tmux list-sessions -F '\#{session_name}'`.split("\n")
 
