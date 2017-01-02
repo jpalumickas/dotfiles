@@ -9,6 +9,7 @@ atom.symlink/blob-store
 atom.symlink/compile-cache
 atom.symlink/dev
 atom.symlink/packages
+atom.symlink/recovery
 atom.symlink/storage
 atom.symlink/themes
 

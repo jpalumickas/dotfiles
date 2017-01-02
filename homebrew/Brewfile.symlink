@@ -48,6 +48,7 @@ brew 'rbenv', args: ['HEAD']
 brew 'ruby-build'
 brew 'tmux'
 brew 'vim'
+brew 'yarn'
 
 # Open SSL
 #install openssl
