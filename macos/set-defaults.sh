@@ -2,9 +2,9 @@
 
 source $ZSH/install/helpers/messages.sh
 
-# Sets reasonable OS X defaults.
+# Sets reasonable macOS defaults.
 #
-# Or, in other words, set shit how I like in OS X.
+# Or, in other words, set shit how I like in macOS.
 #
 # The original idea (and a couple settings) were grabbed from:
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
@@ -15,7 +15,7 @@ source $ZSH/install/helpers/messages.sh
 # General UI/UX                                                               #
 ###############################################################################
 
-echo_info "  Configuring OSX..."
+echo_info "  Configuring macOS..."
 echo_info "    Setting General UI/UX preferences"
 
 # Expand save panel by default

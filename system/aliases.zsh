@@ -21,7 +21,7 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # Recursively delete `.DS_Store` files
 alias dscleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
-# OS X restarts
+# macOS restarts
 alias rrfinder="killall -KILL Finder"
 alias rrdock="killall -KILL Dock" # launchctl stop com.apple.Dock.agent
 alias rrmenubar="killall -KILL SystemUIServer"

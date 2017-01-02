@@ -83,7 +83,7 @@ set hlsearch         " Hilight searches by default
 set viminfo='100,f1  " Save up to 100 marks, enable capital marks
 set ignorecase       " (ic) ignores case in search patterns
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.DS_Store     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.DS_Store     " macOS/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 
