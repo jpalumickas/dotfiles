@@ -2,12 +2,8 @@ bundler
 rubocop
 scss_lint
 byebug
-rubycritic
-flog
-flay
 mailcatcher
 lolcommits
 tmuxinator
-foodcritic
 brakeman
 bullet
