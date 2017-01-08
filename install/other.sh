@@ -22,7 +22,7 @@ then
   heroku plugins:update heroku-config
 else
   echo_info "  Installing heroku-config plugin for you."
-  heroku plugins:install git://github.com/ddollar/heroku-config.git
+  heroku plugins:install heroku-config
 fi
 
 # === Bundler settings
