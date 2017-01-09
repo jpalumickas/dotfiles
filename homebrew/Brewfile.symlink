@@ -19,8 +19,11 @@ brew 'chromedriver'
 brew 'coreutils'
 brew 'ctags'
 brew 'ffmpeg'
+brew 'gnupg2' # GPG Keys
 brew 'grc'
+brew 'heroku'
 brew 'imagemagick'
+brew 'keybase'
 brew 'mackup' # Auto backup settings
 brew 'pick'
 brew 'qt' # used by Capybara Webkit for headless Javascript integration testing
@@ -31,7 +34,6 @@ brew 'ssh-copy-id'
 brew 'the_silver_searcher' # Faster search than ack
 brew 'tree'
 brew 'watch'
-brew 'heroku'
 brew 'wget', args: ['enable-iri']
 
 # Databases
