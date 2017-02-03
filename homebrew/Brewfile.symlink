@@ -14,6 +14,7 @@ brew 'zsh'
 
 # Utilities
 brew 'ack'
+brew 'archey' # System information
 brew 'battery'
 brew 'chromedriver'
 brew 'coreutils'
@@ -35,6 +36,7 @@ brew 'the_silver_searcher' # Faster search than ack
 brew 'tree'
 brew 'watch'
 brew 'wget', args: ['enable-iri']
+brew 'wifi-password'
 
 # Databases
 brew 'mysql'
@@ -51,6 +53,7 @@ brew 'ruby-build'
 brew 'tmux'
 brew 'vim'
 brew 'yarn'
+cask 'wkhtmltopdf'
 
 # Open SSL
 #install openssl
@@ -64,6 +67,7 @@ brew 'yarn'
 
 # Casks
 # cask '1password'
+cask 'aerial' # Screen Saver
 cask 'atom'
 cask 'cyberduck'
 cask 'dash'
@@ -75,9 +79,19 @@ cask 'insomniax'
 cask 'postico' # Postgresql Client
 cask 'sequel-pro' # MySQL Client
 cask 'skype'
+cask 'kap' # Capture Screen
 # cask 'slack'
 cask 'spotify'
 cask 'steam'
 cask 'transmission'
 cask 'tunnelbear' # VPN
 cask 'vlc'
+
+# QuickLook Casks
+cask 'betterzipql' # QuickLook - Preview ZIP files
+cask 'qlcolorcode' # QuickLook - Colored Code
+cask 'qlmarkdown' # QuickLook - Markdown files
+cask 'qlprettypatch' # QuickLook - Patch files
+cask 'qlstephen' # QuickLook - Preview plain text files without or with unknown file extension
+cask 'quicklook-csv' # QuickLook - Preview CSV files
+cask 'quicklook-json' # QuickLook - Preview JSON files
