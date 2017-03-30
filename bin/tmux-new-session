@@ -12,6 +12,9 @@ end
 
 tmux_name = tmux_name.gsub(/[^0-9a-z\-\_]/i, '').downcase
 
+# Remove adjacent identical elements
+tmux_name = tmux_name.split('-').chunk { |n| n }.map(&:first).join('-')
+
 tmux_current_sessions = `tmux list-sessions -F '\#{session_name}'`.split("\n")
 
 if tmux_current_sessions.include?(tmux_name)
