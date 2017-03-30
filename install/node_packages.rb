@@ -14,7 +14,7 @@ NODE_PACKAGES = [
 ].freeze
 
 def install(package)
-  system("npm install -g #{package}")
+  system("yarn global add #{package}")
 end
 
 puts '  Installing Node packages'

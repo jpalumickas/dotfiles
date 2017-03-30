@@ -19,7 +19,7 @@ fi
 if heroku plugins | grep -q "heroku-config";
 then
   echo_info "  Updating heroku-config plugin for you."
-  heroku plugins:update heroku-config
+  heroku plugins:install heroku-config
 else
   echo_info "  Installing heroku-config plugin for you."
   heroku plugins:install heroku-config
