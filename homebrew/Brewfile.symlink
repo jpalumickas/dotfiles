@@ -6,6 +6,7 @@ cask_args appdir: '/Applications'
 tap 'Goles/battery' # Used for: battery
 tap 'Homebrew/bundle'
 tap 'Homebrew/services'
+tap 'caskroom/fonts'
 tap 'thoughtbot/formulae' # Used for: pick
 
 # First ones
@@ -94,3 +95,9 @@ cask 'qlprettypatch' # QuickLook - Patch files
 cask 'qlstephen' # QuickLook - Preview plain text files without or with unknown file extension
 cask 'quicklook-csv' # QuickLook - Preview CSV files
 cask 'quicklook-json' # QuickLook - Preview JSON files
+
+# Fonts
+cask 'font-roboto'
+cask 'font-open-sans'
+cask 'font-raleway'
+cask 'font-tangerine'
