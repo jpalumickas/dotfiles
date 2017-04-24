@@ -29,6 +29,8 @@
     command: "/Users/jpalumickas/.rbenv/shims/rubocop"
   "linter-scss-lint":
     scssLintExecutablePath: "/Users/jpalumickas/.rbenv/shims/scss-lint"
+  "linter-ui-default":
+    showPanel: true
   "release-notes":
     viewedVersion: "0.95.0"
   "spell-check":
