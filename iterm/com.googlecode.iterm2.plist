@@ -12092,6 +12092,8 @@
 	<integer>0</integer>
 	<key>HotkeyCode</key>
 	<integer>0</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>0</integer>
 	<key>IRMemory</key>
@@ -12147,11 +12149,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 534 620 392 0 0 2560 1080 </string>
+	<string>970 536 620 392 0 0 2560 1080 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 163 606 456 0 0 2560 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>737 183 796 473 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 75 650 452 0 0 2560 1057 </string>
+	<string>0 82 650 452 0 0 2560 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -17414,7 +17418,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-30T08:42:30Z</date>
+	<date>2017-06-26T07:37:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -17473,7 +17477,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.beta.5</string>
 	<key>kCommandHistoryHasEverBeenUsed</key>
 	<true/>
 </dict>

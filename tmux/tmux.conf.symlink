@@ -1,5 +1,7 @@
 # Don't lose ENV
 set -ga update-environment ' ITERM_PROFILE TMUX_STATUS_LEFT'
+# Unset RBENV_VERSION environment
+set-environment -gu RBENV_VERSION
 set-window-option -g mode-keys vi
 
 set -g default-terminal "xterm-256color"
@@ -73,7 +75,6 @@ set -g history-limit 10000
 set -g focus-events on
 
 ## messages
-set-option -g quiet
 set-option -g message-fg colour0
 set-option -g message-bg colour4
 set-option -g display-time 5000
