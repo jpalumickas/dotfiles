@@ -20,6 +20,7 @@ brew 'battery'
 brew 'chromedriver'
 brew 'coreutils'
 brew 'ctags'
+brew 'exa'
 brew 'ffmpeg'
 brew 'gnupg2' # GPG Keys
 brew 'grc'

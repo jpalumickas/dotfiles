@@ -8,6 +8,12 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+if $(exa &>/dev/null)
+then
+  alias l="exa -lagh"
+  alias ll="exa -lgh"
+  alias la='exa -a'
+fi
 
 # Pretty print the path
 alias path="echo $PATH | tr -s ':' '\n'"
