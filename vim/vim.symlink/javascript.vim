@@ -6,4 +6,6 @@ augroup vimrcJavascript
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
+  " autocmd BufWritePre *.js,*.jsx Neoformat prettier
 augroup END

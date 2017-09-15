@@ -22,6 +22,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-endwise' " Here’s the useful plugin that adds end after if, do, def keywords.
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive' " GIT
+Plugin 'tpope/vim-rhubarb' " If fugitive.vim is the Git, rhubarb.vim is the Hub.
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/ctags.vim'
@@ -31,12 +32,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jtratner/vim-flavored-markdown' " GitHub markdown
 Plugin 'rking/ag.vim' " For searching
+Plugin 'mileszs/ack.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'honza/vim-snippets'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'sbdchd/neoformat' " A (Neo)vim plugin for formatting code.
 
 " Go
 Plugin 'fatih/vim-go'
@@ -49,11 +52,11 @@ Plugin 'tpope/vim-rails'
 
 " Syntax
 Plugin 'tpope/vim-cucumber'
+Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
-Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 Plugin 'isRuslan/vim-es6'

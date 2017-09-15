@@ -17418,7 +17418,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-08-18T02:44:18Z</date>
+	<date>2017-09-15T07:30:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -17477,7 +17477,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.7</string>
+	<string>3.1.beta.10</string>
 	<key>kCommandHistoryHasEverBeenUsed</key>
 	<true/>
 </dict>
