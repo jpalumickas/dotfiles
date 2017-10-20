@@ -1,10 +1,4 @@
 bundler
-rubocop
-scss_lint
 byebug
-mailcatcher
 lolcommits
 tmuxinator
-brakeman
-bullet
-slim_lint
