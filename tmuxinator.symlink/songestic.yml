@@ -1,9 +1,0 @@
-# ~/.tmuxinator/songestic.yml
-
-name: songestic
-root: ~/Projects/songestic
-
-windows:
-  - terminal: #clear
-  - editor: vim
-  - watcher: gulp build && gulp watch
