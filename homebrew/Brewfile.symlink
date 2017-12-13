@@ -7,7 +7,6 @@ tap 'Goles/battery' # Used for: battery
 tap 'Homebrew/bundle'
 tap 'Homebrew/services'
 tap 'caskroom/fonts'
-tap 'thoughtbot/formulae' # Used for: pick
 
 # First ones
 brew 'cmake'
@@ -15,19 +14,16 @@ brew 'zsh'
 
 # Utilities
 brew 'ack'
-brew 'archey' # System information
 brew 'battery'
-brew 'chromedriver'
 brew 'coreutils'
 brew 'ctags'
-brew 'exa'
+brew 'exa' # Color ls
 brew 'ffmpeg'
 brew 'gnupg2' # GPG Keys
 brew 'grc'
-brew 'heroku'
+brew 'heroku-toolbelt'
 brew 'imagemagick'
 brew 'mackup' # Auto backup settings
-brew 'pick'
 brew 'qt' # used by Capybara Webkit for headless Javascript integration testing
 brew 'reattach-to-user-namespace' # Tmux clipboard
 brew 'spark'
