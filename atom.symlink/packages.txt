@@ -1,4 +1,4 @@
-atom-beautify@0.30.5
+atom-beautify@0.32.2
 busy-signal@1.4.3
 color-picker@2.2.5
 ex-mode@0.18.0
@@ -6,16 +6,17 @@ git-time-machine@1.5.9
 intentions@1.1.5
 language-csv@1.1.2
 language-docker@1.1.8
+language-liquid@0.6.0
 linter@2.2.0
-linter-docker@0.2.1
-linter-eslint@8.2.1
-linter-rubocop@2.1.1
-linter-sass-lint@1.7.6
-linter-ui-default@1.6.9
-prettier-atom@0.39.0
-pretty-json@1.6.4
+linter-docker@0.3.0
+linter-eslint@8.4.1
+linter-rubocop@2.2.3
+linter-sass-lint@1.8.3
+linter-ui-default@1.7.1
+prettier-atom@0.53.0
+pretty-json@2.0.0
 qolor@0.4.2
-react@0.16.2
-sort-lines@0.15.0
-vim-mode-plus@1.4.0
+react@0.18.0
+sort-lines@0.18.0
+vim-mode-plus@1.31.1
 
