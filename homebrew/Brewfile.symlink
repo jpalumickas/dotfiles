@@ -7,6 +7,7 @@ tap 'Goles/battery' # Used for: battery
 tap 'Homebrew/bundle'
 tap 'Homebrew/services'
 tap 'caskroom/fonts'
+tap 'homebrew/cask-fonts'
 
 # First ones
 brew 'cmake'
@@ -49,7 +50,7 @@ brew 'rbenv', args: ['HEAD']
 brew 'ruby-build'
 brew 'tmux'
 brew 'vim'
-brew 'yarn'
+brew 'yarn', args: ['without-node']
 cask 'wkhtmltopdf'
 
 # Open SSL
