@@ -49,7 +49,7 @@ brew 'rbenv', args: ['HEAD']
 brew 'ruby-build'
 brew 'tmux'
 brew 'vim'
-brew 'yarn'
+brew 'yarn', args: ['without-node']
 cask 'wkhtmltopdf'
 
 # Open SSL
