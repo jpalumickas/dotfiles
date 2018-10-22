@@ -2,3 +2,5 @@
 
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
+
+export PATH="$(yarn global bin):$PATH"
