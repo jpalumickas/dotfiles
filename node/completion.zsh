@@ -1,6 +1,1 @@
-completion="$(brew --prefix)/etc/bash_completion.d/nvm"
-
-if test -f $completion
-then
-  source $completion
-fi
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion"
