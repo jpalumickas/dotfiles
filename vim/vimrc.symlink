@@ -172,7 +172,10 @@ source ~/.vim/colors/settings/global.vim
 " source ~/.vim/colors/settings/gruvbox.vim
 
 " One Dark
-source ~/.vim/colors/settings/onedark.vim
+" source ~/.vim/colors/settings/onedark.vim
+
+" Snazzy
+source ~/.vim/colors/settings/snazzy.vim
 
 " Additional settings
 " ===================
