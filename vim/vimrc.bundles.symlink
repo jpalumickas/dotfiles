@@ -18,7 +18,8 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'christoomey/vim-run-interactive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pbrisbin/vim-mkdir'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'tpope/vim-endwise' " Here’s the useful plugin that adds end after if, do, def keywords.
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive' " GIT
