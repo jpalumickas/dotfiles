@@ -25,9 +25,7 @@ brew 'grc'
 brew 'heroku-toolbelt'
 brew 'imagemagick'
 brew 'mackup' # Auto backup settings
-brew 'qt' # used by Capybara Webkit for headless Javascript integration testing
 brew 'reattach-to-user-namespace' # Tmux clipboard
-brew 'spark'
 brew 'sqlite'
 brew 'ssh-copy-id'
 brew 'the_silver_searcher' # Faster search than ack
@@ -77,7 +75,6 @@ cask 'insomniax'
 cask 'postico' # Postgresql Client
 cask 'sequel-pro' # MySQL Client
 cask 'skype'
-cask 'kap' # Capture Screen
 # cask 'slack'
 cask 'spotify'
 cask 'steam'
