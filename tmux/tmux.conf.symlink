@@ -75,17 +75,14 @@ set -g history-limit 10000
 set -g focus-events on
 
 ## messages
-set-option -g message-fg colour0
-set-option -g message-bg colour4
+set -g message-style fg=colour0,bg=colour4
 set-option -g display-time 5000
 
 ## set status bar
 set-option -g status-interval 1
-set-option -g status-fg colour10
-set-option -g status-bg default
-set-option -g status-left-fg default
-set-option -g status-left-bg default
-set-option -g status-right-bg default
+set -g status-style fg=colour10,bg=default
+set -g status-left-style fg=default,bg=default
+set -g status-right-style bg=default
 bind-key / set-option status
 
 # "I' == current window index
@@ -105,13 +102,10 @@ set-option -g status-right-length 100
 set-option -g status-left-length 120
 
 ## highlight active window
-set-window-option -g window-status-current-fg colour4
-set-window-option -g window-status-current-attr bold
-set-window-option -g window-status-current-bg default
+set -g window-status-current-style fg=colour4,bg=default,bold
 set-window-option -g window-status-current-format '[ #I #W ]'
 
-set-window-option -g window-status-bell-fg colour226
-set-window-option -g window-status-bell-bg colour23
+set -g window-status-bell-style fg=colour226,bg=colour23
 
 # renumber windows
 set-option -g renumber-windows on
@@ -130,7 +124,7 @@ set-option -gw  monitor-activity  off
 
 set-window-option -g pane-base-index 1
 set-window-option -g window-status-format ' #I #W '
-set-window-option -g window-status-attr dim
+set -g window-status-style dim
 
 set -g mouse on
 bind-key -T root WheelUpPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"
@@ -151,13 +145,10 @@ bind M \
 
 
 ## pane border and colors
-set-option -g pane-active-border-fg colour4
-set-option -g pane-active-border-bg default
+set -g pane-active-border-style fg=colour4,bg=default
 
 ## chooser colors
-set-window-option -g    mode-bg   colour5    # selector background
-set-window-option -g    mode-fg   black  # selector foreground
-
+set -g mode-style bg=colour5,fg=black
 
 ## Copy/paste
 set-option -g default-command "reattach-to-user-namespace -l zsh; tmux rename-window zsh"
