@@ -1,12 +1,10 @@
 #update
 
-cask_args appdir: '/Applications'
+# cask_args appdir: '/Applications'
 
 # Taps
-tap 'Goles/battery' # Used for: battery
 tap 'Homebrew/bundle'
 tap 'Homebrew/services'
-tap 'caskroom/fonts'
 tap 'homebrew/cask-fonts'
 
 # First ones
@@ -15,7 +13,6 @@ brew 'zsh'
 
 # Utilities
 brew 'ack'
-brew 'battery'
 brew 'coreutils'
 brew 'ctags'
 brew 'exa' # Color ls
@@ -24,7 +21,6 @@ brew 'gnupg2' # GPG Keys
 brew 'grc'
 brew 'heroku-toolbelt'
 brew 'imagemagick'
-brew 'mackup' # Auto backup settings
 brew 'reattach-to-user-namespace' # Tmux clipboard
 brew 'sqlite'
 brew 'ssh-copy-id'
@@ -40,11 +36,10 @@ brew 'postgres', args: ['no-python']
 brew 'redis'
 
 # Development
-brew 'editorconfig'
 brew 'git'
 brew 'hub'
 brew 'nvm'
-brew 'rbenv', args: ['HEAD']
+brew 'rbenv'
 brew 'ruby-build'
 brew 'tmux'
 brew 'vim'
@@ -62,7 +57,7 @@ cask 'wkhtmltopdf'
 #link readline --force
 
 # Casks
-# cask '1password'
+cask '1password'
 cask 'aerial' # Screen Saver
 cask 'atom'
 cask 'cyberduck'
@@ -79,7 +74,7 @@ cask 'skype'
 cask 'spotify'
 cask 'steam'
 cask 'transmission'
-cask 'tunnelbear' # VPN
+# cask 'tunnelbear' # VPN
 cask 'vlc'
 
 # QuickLook Casks
