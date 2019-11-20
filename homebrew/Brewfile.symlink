@@ -59,6 +59,7 @@ cask 'wkhtmltopdf'
 # Casks
 cask '1password'
 cask 'aerial' # Screen Saver
+cask 'alfred'
 cask 'atom'
 cask 'cyberduck'
 cask 'dash'
@@ -68,6 +69,7 @@ cask 'github-desktop'
 cask 'google-drive'
 cask 'insomniax'
 cask 'postico' # Postgresql Client
+cask 'postman'
 cask 'sequel-pro' # MySQL Client
 cask 'skype'
 # cask 'slack'
@@ -76,6 +78,7 @@ cask 'steam'
 cask 'transmission'
 # cask 'tunnelbear' # VPN
 cask 'vlc'
+cask 'visual-studio-code'
 
 # QuickLook Casks
 cask 'betterzipql' # QuickLook - Preview ZIP files
