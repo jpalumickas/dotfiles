@@ -1,3 +1,4 @@
+export LC_ALL=en_US.UTF-8
 export DISABLE_AUTO_TITLE=true
 
 # Wrap ssh commmand to allow smart pane behavior in tmux.
