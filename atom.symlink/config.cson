@@ -29,7 +29,8 @@
     command: "/Users/jpalumickas/.rbenv/shims/rubocop"
   "linter-scss-lint":
     scssLintExecutablePath: "/Users/jpalumickas/.rbenv/shims/scss-lint"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    showPanel: true
   "prettier-atom":
     formatOnSaveOptions: {}
   "release-notes":
