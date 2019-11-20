@@ -37,10 +37,10 @@ Plugin 'mileszs/ack.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'honza/vim-snippets'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'sbdchd/neoformat' " A (Neo)vim plugin for formatting code.
+" Plugin 'shmargum/vim-sass-colors' " Commented due bug
 
 " Go
 Plugin 'fatih/vim-go'
@@ -62,6 +62,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 Plugin 'isRuslan/vim-es6'
 Plugin 'sheerun/vim-polyglot' " A collection of language packs.
+Plugin 'prettier/vim-prettier'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
