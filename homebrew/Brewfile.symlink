@@ -6,6 +6,7 @@
 tap 'Homebrew/bundle'
 tap 'Homebrew/services'
 tap 'homebrew/cask-fonts'
+tap 'heroku/brew'
 
 # First ones
 brew 'cmake'
@@ -19,7 +20,7 @@ brew 'exa' # Color ls
 brew 'ffmpeg'
 brew 'gnupg2' # GPG Keys
 brew 'grc'
-brew 'heroku-toolbelt'
+brew 'heroku'
 brew 'imagemagick'
 brew 'reattach-to-user-namespace' # Tmux clipboard
 brew 'sqlite'
@@ -27,12 +28,12 @@ brew 'ssh-copy-id'
 brew 'the_silver_searcher' # Faster search than ack
 brew 'tree'
 brew 'watch'
-brew 'wget', args: ['enable-iri']
+brew 'wget'
 brew 'wifi-password'
 
 # Databases
 brew 'mysql'
-brew 'postgres', args: ['no-python']
+brew 'postgres'
 brew 'redis'
 
 # Development
@@ -43,7 +44,7 @@ brew 'rbenv'
 brew 'ruby-build'
 brew 'tmux'
 brew 'vim'
-brew 'yarn', args: ['without-node']
+brew 'yarn', args: ['ignore-dependencies']
 cask 'wkhtmltopdf'
 
 # Open SSL
@@ -57,17 +58,17 @@ cask 'wkhtmltopdf'
 #link readline --force
 
 # Casks
-cask '1password'
+# cask '1password'
 cask 'aerial' # Screen Saver
 cask 'alfred'
 cask 'atom'
 cask 'cyberduck'
 cask 'dash'
 # cask 'dropbox'
-cask 'github-desktop'
+cask 'github'
 # cask 'google-chrome'
-cask 'google-drive'
-cask 'insomniax'
+# cask 'google-drive'
+# cask 'insomniax'
 cask 'postico' # Postgresql Client
 cask 'postman'
 cask 'sequel-pro' # MySQL Client
@@ -79,15 +80,21 @@ cask 'transmission'
 # cask 'tunnelbear' # VPN
 cask 'vlc'
 cask 'visual-studio-code'
+cask 'betterzip' # Includes QuickLook for ZIP
 
 # QuickLook Casks
-cask 'betterzipql' # QuickLook - Preview ZIP files
+# You can find some interesting on
+# https://github.com/sindresorhus/quick-look-plugins
+#
 cask 'qlcolorcode' # QuickLook - Colored Code
 cask 'qlmarkdown' # QuickLook - Markdown files
 cask 'qlprettypatch' # QuickLook - Patch files
 cask 'qlstephen' # QuickLook - Preview plain text files without or with unknown file extension
 cask 'quicklook-csv' # QuickLook - Preview CSV files
 cask 'quicklook-json' # QuickLook - Preview JSON files
+cask 'qlimagesize' # QuickLook - Display image size and resolution
+cask 'quicklookase' # QuickLook - Preview Adobe ASE Color Swatches generated
+cask 'provisionql' # QuickLook - Preview iOS / macOS app and provision information
 
 # Fonts
 cask 'font-roboto'
