@@ -1,0 +1,20 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight",
+    "when": "filesExplorerFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateTop",
+    "when": "terminalFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  { "key": "ctrl+,", "command": "workbench.action.terminal.focus"},
+  { "key": "ctrl+,", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"}
+]

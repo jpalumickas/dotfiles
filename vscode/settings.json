@@ -1,0 +1,26 @@
+{
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "newUntitledFile",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["C-h"],
+            "commands": ["workbench.action.navigateLeft"]
+        },
+        {
+            "before": ["C-l"],
+            "commands": ["workbench.action.navigateRight"]
+        },
+        {
+            "before": ["C-j"],
+            "commands": ["workbench.action.navigateBottom"]
+        },
+        {
+            "before": ["C-k"],
+            "commands": ["workbench.action.navigateTop"]
+        }
+    ],
+    "workbench.colorTheme": "One Dark Pro",
+    "vim.leader": ",",
+    "vim.useSystemClipboard": true,
+    "ruby.useBundler": true
+}
