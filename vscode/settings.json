@@ -1,6 +1,11 @@
 {
     "editor.tabSize": 2,
     "workbench.startupEditor": "newUntitledFile",
+    "editor.fontSize": 14,
+    "files.eol": "\n",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "editor.tabSize": 2,
     "vim.normalModeKeyBindings": [
         {
             "before": ["C-h"],
@@ -22,5 +27,8 @@
     "workbench.colorTheme": "One Dark Pro",
     "vim.leader": ",",
     "vim.useSystemClipboard": true,
-    "ruby.useBundler": true
+    "ruby.useBundler": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true
 }
