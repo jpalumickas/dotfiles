@@ -42,6 +42,10 @@ done
 
 unset config_files
 
+# Allow [ or ] whereever you want
+# https://github.com/thoughtbot/dotfiles/pull/194
+unsetopt nomatch
+
 # Better history
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search
