@@ -12,7 +12,7 @@ set encoding=utf-8
 set number              " Line numbers are good
 set numberwidth=5
 set backspace=2         " Backspace deletes like most programs in insert mode
-set history=50          " Store lots of :cmdline history
+set history=1000          " Store lots of :cmdline history
 set showcmd             " Show incomplete cmds down the bottom
 set showmode            " Show current mode down the bottom
 set gcr=a:blinkon0      " Disable cursor blink
@@ -27,6 +27,8 @@ set ruler               " Show the cursor position all the time
 set lazyredraw          " Faster scroll
 set ttyscroll=3         " Faster scroll
 set timeoutlen=500
+set wildmenu
+set tabpagemax=50
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
@@ -112,7 +114,8 @@ set shiftround                    " always indent by multiple of shiftwidth
 filetype plugin on
 filetype indent on
 
-set list listchars=tab:\ \ ,trail:·   " Display tabs and trailing spaces visually
+set listchars=tab:>\ ,trail:·,extends:>,precedes:<,nbsp:+   " Display tabs and trailing spaces visually
+set formatoptions+=j " Delete comment character when joining commented lines
 set nowrap                            " Don't wrap lines
 set wrapmargin=0
 set formatoptions-=t
