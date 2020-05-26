@@ -15,11 +15,11 @@ Plugin 'SirVer/ultisnips'
 
 " Define bundles via Github repos
 Plugin 'tpope/vim-dispatch'
-Plugin 'christoomey/vim-run-interactive'
+" Plugin 'christoomey/vim-run-interactive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pbrisbin/vim-mkdir'
 " Plugin 'scrooloose/syntastic'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'tpope/vim-endwise' " Here’s the useful plugin that adds end after if, do, def keywords.
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive' " GIT
@@ -39,11 +39,11 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'honza/vim-snippets'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'sbdchd/neoformat' " A (Neo)vim plugin for formatting code.
+" Plugin 'sbdchd/neoformat' " A (Neo)vim plugin for formatting code.
 " Plugin 'shmargum/vim-sass-colors' " Commented due bug
 
 " Go
-Plugin 'fatih/vim-go'
+" Plugin 'fatih/vim-go'
 
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
@@ -52,12 +52,11 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
 
 " Syntax
-Plugin 'tpope/vim-cucumber'
+" Plugin 'tpope/vim-cucumber'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'mtscout6/vim-cjsx'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 Plugin 'isRuslan/vim-es6'
