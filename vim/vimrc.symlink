@@ -27,7 +27,6 @@ set ruler               " Show the cursor position all the time
 set lazyredraw          " Faster scroll
 set ttyscroll=3         " Faster scroll
 set timeoutlen=500
-set regexpengine=1
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
