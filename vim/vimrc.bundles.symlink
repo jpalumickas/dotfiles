@@ -10,7 +10,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Utilities
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 
 
 " Define bundles via Github repos
@@ -62,6 +62,13 @@ Plugin 'elzr/vim-json'
 Plugin 'isRuslan/vim-es6'
 Plugin 'sheerun/vim-polyglot' " A collection of language packs.
 Plugin 'prettier/vim-prettier'
+
+" Autocomplete
+Plugin 'ycm-core/YouCompleteMe'
+" Plugin 'Shougo/deoplete.nvim'
+" Plugin 'roxma/nvim-yarp'
+" Plugin 'roxma/vim-hug-neovim-rpc'
+" Plugin 'mhartington/nvim-typescript'
 
 " Tmux
 Plugin 'christoomey/vim-tmux-navigator'
