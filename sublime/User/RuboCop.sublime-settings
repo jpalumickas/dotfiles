@@ -1,5 +1,0 @@
-{
-  "rubocop_command": "rubocop -R {path}",
-  "check_for_rvm": false,
-  "check_for_rbenv": true
-}

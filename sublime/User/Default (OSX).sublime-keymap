@@ -1,8 +1,0 @@
-[
-  { "keys": ["super+enter"], "command": "goto_definition" },
-  { "keys": ["super+v"], "command": "paste_and_indent" },
-  {
-    "keys": ["super+shift+a"], "command": "align_tab",
-    "args" : {"live_preview" : true}
-  }
-]
