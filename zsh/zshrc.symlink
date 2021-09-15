@@ -72,3 +72,5 @@ export PATH="$(consolidate-path "$PATH")"
 # [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# fnm
+eval "$(fnm env --multi)"

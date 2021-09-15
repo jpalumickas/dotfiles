@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ### lolcommits hook (begin) ###
-export LANG=""
-export PATH="/Users/jpalumickas/.rbenv/versions/$(rbenv global)/bin:/usr/local/bin:$PATH"
-lolcommits --capture --delay=5 --fork --stealth
+# export LANG=""
+# export PATH="/Users/jpalumickas/.rbenv/versions/$(rbenv global)/bin:/usr/local/bin:$PATH"
+# lolcommits --capture --delay=5 --fork --stealth
 ###  lolcommits hook (end)  ###
