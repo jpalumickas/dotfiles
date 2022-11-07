@@ -21,7 +21,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 
   let g:ag_prg="ag --vimgrep"
-  let g:ag_working_path_mode="r"
+  let g:ag_working_path_mode="ra"
   let g:ackprg = 'ag --vimgrep'
 
   " map <leader>f :Ack!<space>

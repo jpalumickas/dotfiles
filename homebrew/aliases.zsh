@@ -1,1 +1,1 @@
-alias brew-restart-postgres='brew services stop postgres; rm /usr/local/var/postgres/postmaster.pid; brew services start postgresql'
+alias brew-restart-postgres='brew services stop postgresql@14; rm /usr/local/var/postgresql@14/postmaster.pid; brew services start postgresql@14'
