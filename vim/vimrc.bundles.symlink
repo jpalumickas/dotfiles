@@ -55,6 +55,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'pangloss/vim-javascript'
 Plugin 'sheerun/vim-polyglot' " A collection of language packs.
 Plugin 'prettier/vim-prettier'
+Plugin 'pantharshit00/vim-prisma'
 
 " Autocomplete
 Plugin 'ycm-core/YouCompleteMe'
