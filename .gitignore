@@ -24,6 +24,8 @@ sublime/User/Package Control.system-ca-bundle
 # Vim
 vim/vim.symlink/.netrwhist
 vim/vim.symlink/bundle
+vim/vim.symlink/plugged
+vim/vim.symlink/autoload/plug.vim
 vim/vim.symlink/undo
 
 irssi.symlink/config.autosave

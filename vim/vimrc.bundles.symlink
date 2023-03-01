@@ -1,89 +1,79 @@
-if &compatible
-  set nocompatible
-end
-
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-
-" Let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+call plug#begin()
 
 " Utilities
-" Plugin 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 
 
 " Define bundles via Github repos
-Plugin 'tpope/vim-dispatch'
-" Plugin 'christoomey/vim-run-interactive'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'pbrisbin/vim-mkdir'
-" Plugin 'scrooloose/syntastic'
-Plugin 'dense-analysis/ale'
-Plugin 'tpope/vim-endwise' " Here’s the useful plugin that adds end after if, do, def keywords.
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive' " GIT
-Plugin 'tpope/vim-rhubarb' " If fugitive.vim is the Git, rhubarb.vim is the Hub.
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/ctags.vim'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/tComment'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-" Plugin 'jtratner/vim-flavored-markdown' " GitHub markdown
-Plugin 'rking/ag.vim' " For searching
-Plugin 'mileszs/ack.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'honza/vim-snippets'
-" Plugin 'editorconfig/editorconfig-vim'
-" Plugin 'sbdchd/neoformat' " A (Neo)vim plugin for formatting code.
-" Plugin 'shmargum/vim-sass-colors' " Commented due bug
+Plug 'tpope/vim-dispatch'
+" Plug 'christoomey/vim-run-interactive'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'pbrisbin/vim-mkdir'
+" Plug 'scrooloose/syntastic'
+Plug 'dense-analysis/ale'
+Plug 'tpope/vim-endwise' " Here’s the useful plugin that adds end after if, do, def keywords.
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive' " GIT
+Plug 'tpope/vim-rhubarb' " If fugitive.vim is the Git, rhubarb.vim is the Hub.
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/ctags.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/tComment'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'jtratner/vim-flavored-markdown' " GitHub markdown
+Plug 'rking/ag.vim' " For searching
+Plug 'mileszs/ack.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'junegunn/vim-easy-align'
+Plug 'honza/vim-snippets'
+" Plug 'editorconfig/editorconfig-vim'
+" Plug 'sbdchd/neoformat' " A (Neo)vim plugin for formatting code.
+" Plug 'shmargum/vim-sass-colors' " Commented due bug
 
 " Go
-" Plugin 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 
 " Ruby
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
 
 " Syntax
-Plugin 'pangloss/vim-javascript'
-Plugin 'sheerun/vim-polyglot' " A collection of language packs.
-Plugin 'prettier/vim-prettier'
-Plugin 'pantharshit00/vim-prisma'
+Plug 'pangloss/vim-javascript'
+Plug 'sheerun/vim-polyglot' " A collection of language packs.
+Plug 'prettier/vim-prettier'
+Plug 'pantharshit00/vim-prisma'
 
 " Autocomplete
-Plugin 'ycm-core/YouCompleteMe'
-" Plugin 'Shougo/deoplete.nvim'
-" Plugin 'roxma/nvim-yarp'
-" Plugin 'roxma/vim-hug-neovim-rpc'
-" Plugin 'mhartington/nvim-typescript'
+Plug 'ycm-core/YouCompleteMe'
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'roxma/nvim-yarp'
+" Plug 'roxma/vim-hug-neovim-rpc'
+" Plug 'mhartington/nvim-typescript'
 
 " Tmux
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'tmux-plugins/vim-tmux'
-Plugin 'wellle/tmux-complete.vim'
-Plugin 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'wellle/tmux-complete.vim'
+Plug 'benmills/vimux'
 
 " Color Schemes
-" Plugin 'altercation/vim-colors-solarized'
-" Plugin 'chriskempson/base16-vim' " Base16 Colors
-" Plugin 'morhetz/gruvbox'
-" Plugin 'joshdick/onedark.vim'
-Plugin 'connorholyday/vim-snazzy'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'chriskempson/base16-vim' " Base16 Colors
+" Plug 'morhetz/gruvbox'
+" Plug 'joshdick/onedark.vim'
+Plug 'connorholyday/vim-snazzy'
 
 " Chef
-Plugin 'dougireton/vim-chef'
+" Plug 'dougireton/vim-chef'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif
 
-call vundle#end()
-filetype on
+call plug#end()
