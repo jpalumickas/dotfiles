@@ -83,7 +83,7 @@ rb_prompt() {
 }
 
 node_prompt() {
-  if ! [[ -z "$(ruby_version)" ]]
+  if ! [[ -z "$(node_version)" ]]
   then
     echo "%{$fg_bold[yellow]%}$(node_version)%{$reset_color%} "
   else
@@ -105,7 +105,7 @@ directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(node_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[red]%}$(_todo_number)%{$reset_color%}"
 }
