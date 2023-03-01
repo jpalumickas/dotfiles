@@ -34,19 +34,19 @@ brew 'wifi-password'
 
 # Databases
 brew 'mysql'
-brew 'postgres'
+brew 'postgresql@14'
 brew 'redis'
 
 # Development
 brew 'git'
-brew 'hub'
-brew 'nvm'
+brew 'gh'
+brew 'n'
 brew 'rbenv'
 brew 'ruby-build'
 brew 'tmux'
 brew 'vim'
 brew 'yarn', args: ['ignore-dependencies']
-cask 'wkhtmltopdf'
+brew 'pnpm'
 
 # Open SSL
 #install openssl
@@ -60,33 +60,20 @@ cask 'wkhtmltopdf'
 
 # Casks
 # cask '1password'
-cask 'aerial' # Screen Saver
-cask 'alfred'
-cask 'atom'
-cask 'cyberduck'
-cask 'dash'
-# cask 'dropbox'
-cask 'github'
+# cask 'aerial' # Screen Saver
+# cask 'cyberduck'
+# cask 'github'
 # cask 'google-chrome'
 # cask 'google-drive'
-# cask 'insomniax'
-cask 'postico' # Postgresql Client
-cask 'postman'
-cask 'sequel-pro' # MySQL Client
-cask 'skype'
+# cask 'postico' # Postgresql Client
+# cask 'postman'
 # cask 'slack'
-cask 'spotify'
-cask 'steam'
-cask 'transmission'
-# cask 'tunnelbear' # VPN
-cask 'vlc'
-cask 'visual-studio-code'
-cask 'betterzip' # Includes QuickLook for ZIP
+# cask 'betterzip' # Includes QuickLook for ZIP
 
 # QuickLook Casks
 # You can find some interesting on
 # https://github.com/sindresorhus/quick-look-plugins
-#
+
 cask 'qlcolorcode' # QuickLook - Colored Code
 cask 'qlmarkdown' # QuickLook - Markdown files
 cask 'qlprettypatch' # QuickLook - Patch files
