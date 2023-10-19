@@ -1,34 +1,89 @@
 {
-    "editor.tabSize": 2,
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.fontSize": 14,
-    "files.eol": "\n",
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "editor.tabSize": 2,
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["C-h"],
-            "commands": ["workbench.action.navigateLeft"]
-        },
-        {
-            "before": ["C-l"],
-            "commands": ["workbench.action.navigateRight"]
-        },
-        {
-            "before": ["C-j"],
-            "commands": ["workbench.action.navigateBottom"]
-        },
-        {
-            "before": ["C-k"],
-            "commands": ["workbench.action.navigateTop"]
-        }
-    ],
-    "workbench.colorTheme": "One Dark Pro",
-    "vim.leader": ",",
-    "vim.useSystemClipboard": true,
-    "ruby.useBundler": true,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true
+  "editor.fontSize": 14,
+  "files.eol": "\n",
+  "workbench.preferredDarkColorTheme": "One Dark Pro",
+  "telemetry.telemetryLevel": "off",
+  "editor.tabSize": 2,
+  "workbench.startupEditor": "newUntitledFile",
+  "vim.leader": ",",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["C-h"],
+      "commands": ["workbench.action.navigateLeft"]
+    },
+    {
+      "before": ["C-l"],
+      "commands": ["workbench.action.navigateRight"]
+    },
+    {
+      "before": ["C-j"],
+      "commands": ["workbench.action.navigateDown"]
+    },
+    {
+      "before": ["C-k"],
+      "commands": ["workbench.action.navigateUp"]
+    }
+  ],
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.bundle": true
+  },
+  "debug.console.fontSize": 14,
+  "markdown.preview.fontSize": 16,
+  "terminal.integrated.fontSize": 14,
+  "search.exclude": {
+    "**/dist": true,
+    "**/yarn-error*.log": true
+  },
+  "json.schemas": [],
+  "redhat.telemetry.enabled": false,
+  "vim.textwidth": 99999,
+  "npm.keybindingsChangedWarningShown": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "files.associations": {
+    ".env-staging": "env"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "workbench.tree.indent": 18,
+  "workbench.colorTheme": "Dracula",
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "prettier.requireConfig": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }

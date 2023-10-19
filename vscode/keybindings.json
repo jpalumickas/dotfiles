@@ -6,8 +6,68 @@
     "when": "filesExplorerFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
   },
   {
+    "key": "m a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus && !inputFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "m b",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus && !inputFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "m r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "m c",
+    "command": "fileutils.duplicateFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "m m",
+    "command": "fileutils.moveFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "m d",
+    "command": "moveFileToTrash",
+    "when": "explorerViewletFocus && !inputFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "s",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletFocus && !inputFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
     "key": "ctrl+k",
-    "command": "workbench.action.navigateTop",
+    "command": "workbench.action.navigateUp",
+    "when": "terminalFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+A c",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+A c",
+    "command": "workbench.action.terminal.new",
+    "when": "!terminalFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+A x",
+    "command": "workbench.action.terminal.kill",
     "when": "terminalFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode != 'Insert'"
   },
   {
@@ -16,5 +76,20 @@
     "when": "vim.active && vim.mode != 'Insert'"
   },
   { "key": "ctrl+,", "command": "workbench.action.terminal.focus"},
-  { "key": "ctrl+,", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"}
+  { "key": "ctrl+,", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
+  {
+    "key": "cmd+enter",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
+  }
 ]
