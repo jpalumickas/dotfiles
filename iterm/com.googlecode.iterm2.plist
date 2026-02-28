@@ -18207,7 +18207,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>Yes</string>
+			<string>Custom Shell</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -18548,6 +18548,8 @@
 				<key>Red Component</key>
 				<real>0.29264676570892334</real>
 			</dict>
+			<key>Load Shell Integration Automatically</key>
+			<false/>
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
@@ -18828,6 +18830,12 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.34604367995873481</real>
+	<key>SuppressShellIntegrationUpgradeAnnouncementForHost_justas@Justas-MBP-2.localdomain</key>
+	<true/>
+	<key>SuppressShellIntegrationUpgradeAnnouncementForHost_justas@Justas-MacBook-Pro-2.local</key>
+	<true/>
+	<key>SuppressShellIntegrationUpgradeAnnouncementForHost_justas@Justas-MacBook-Pro.local</key>
+	<true/>
 	<key>SuppressShellIntegrationUpgradeAnnouncementForHost_justas@MacBook-Pro-2.local</key>
 	<true/>
 	<key>SwitchTabModifier</key>

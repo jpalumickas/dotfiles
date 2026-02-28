@@ -8,11 +8,11 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
-if $(exa &>/dev/null)
+if $(eza &>/dev/null)
 then
-  alias l="exa -lagh"
-  alias ll="exa -lgh"
-  alias la='exa -a'
+  alias l="eza -lagh"
+  alias ll="eza -lgh"
+  alias la='eza -a'
 fi
 
 # Pretty print the path

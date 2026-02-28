@@ -1,3 +1,5 @@
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
@@ -71,6 +73,12 @@ export PATH="$(consolidate-path "$PATH")"
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
 # [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 # fnm
-eval "$(fnm env --use-on-cd)"
+# eval "$(fnm env --use-on-cd)"
+
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+ulimit -n 4096

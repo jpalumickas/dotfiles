@@ -16,7 +16,7 @@ brew 'zsh'
 brew 'ack'
 brew 'coreutils'
 brew 'ctags'
-brew 'exa' # Color ls
+brew 'eza' # Color ls
 brew 'ffmpeg'
 brew 'gnupg2' # GPG Keys
 brew 'grc'
