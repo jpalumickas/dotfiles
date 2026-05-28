@@ -34,6 +34,24 @@ link() {
     echo "link $2 -> $src"
 }
 
+# VSCode/Cursor store user config in different places on macOS vs Linux.
+# Everything else (fish, ghostty, starship, git, mise) is XDG and identical.
+case "$(uname -s)" in
+    Darwin)
+        VSCODE_USER="Library/Application Support/Code/User"
+        CURSOR_USER="Library/Application Support/Cursor/User"
+        ;;
+    Linux)
+        VSCODE_USER=".config/Code/User"
+        CURSOR_USER=".config/Cursor/User"
+        ;;
+    *)
+        echo "warn: unknown OS $(uname -s) — skipping VSCode/Cursor links"
+        VSCODE_USER=""
+        CURSOR_USER=""
+        ;;
+esac
+
 # src (relative to repo)        dest (relative to $HOME)
 link  fish                      .config/fish
 link  ghostty/config            .config/ghostty/config
@@ -42,3 +60,15 @@ link  git/ignore                .config/git/ignore
 link  git/config                .config/git/config
 link  git/config.local          .config/git/config.local
 link  mise/config.toml          .config/mise/config.toml
+
+# Cursor + VSCode share the same JSON files; path varies by OS (see above).
+if [[ -n "$CURSOR_USER" ]]; then
+    link  vscode/settings.json      "$CURSOR_USER/settings.json"
+    link  vscode/keybindings.json   "$CURSOR_USER/keybindings.json"
+    link  vscode/snippets           "$CURSOR_USER/snippets"
+fi
+if [[ -n "$VSCODE_USER" ]]; then
+    link  vscode/settings.json      "$VSCODE_USER/settings.json"
+    link  vscode/keybindings.json   "$VSCODE_USER/keybindings.json"
+    link  vscode/snippets           "$VSCODE_USER/snippets"
+fi
