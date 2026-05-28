@@ -41,3 +41,4 @@ link  starship/starship.toml    .config/starship.toml
 link  git/ignore                .config/git/ignore
 link  git/config                .config/git/config
 link  git/config.local          .config/git/config.local
+link  mise/config.toml          .config/mise/config.toml

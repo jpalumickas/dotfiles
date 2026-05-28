@@ -3,6 +3,12 @@
 
 status is-interactive; or exit 0
 
+# mise — per-project runtime versions (Ruby/Node/Python/…).
+# Activates shims and adjusts PATH on every `cd`.
+if type -q mise
+    mise activate fish | source
+end
+
 # Starship — replaces fish's default prompt.
 if type -q starship
     starship init fish | source

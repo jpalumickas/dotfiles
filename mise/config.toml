@@ -1,0 +1,8 @@
+[tools]
+ruby = "4.0"
+node = "26"
+
+[settings]
+
+[settings.ruby]
+compile = false
