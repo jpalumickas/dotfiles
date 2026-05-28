@@ -1,0 +1,37 @@
+# apt packages — one per line.
+# Comments and blank lines are skipped by the installer.
+#
+# Notes on Ubuntu-specific naming:
+#   - `fd` is packaged as `fd-find` (binary: fdfind) — alias in fish if you want `fd`
+#   - `bat` is packaged as `bat` but the binary is `batcat` on Ubuntu
+#   - `starship` and `mise` aren't in apt; installed by os/ubuntu/install separately
+
+# Shell + multiplexer
+fish
+tmux
+
+# Editor
+neovim
+
+# Git
+git
+gh
+git-delta
+
+# Modern CLI replacements
+ripgrep
+fd-find    # binary: fdfind
+fzf
+bat        # binary: batcat
+eza
+zoxide
+jq
+
+# Build deps — not needed by anything installed here, but `mise install ruby`
+# (and similar) will compile from source unless you set ruby.compile=false.
+# Pre-installing them now means later `mise install` Just Works.
+build-essential
+libssl-dev
+libreadline-dev
+zlib1g-dev
+libyaml-dev

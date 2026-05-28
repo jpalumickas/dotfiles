@@ -1,0 +1,40 @@
+# pacman packages — one per line.
+# Comments and blank lines are skipped by the installer.
+# Official repos only (extra/community). AUR not configured.
+
+# Shell + multiplexer
+fish
+tmux
+
+# Editor
+neovim
+
+# Prompt + runtime manager
+starship
+mise
+
+# Git
+git
+github-cli      # provides `gh`
+git-delta
+
+# Modern CLI replacements
+ripgrep
+fd
+fzf
+bat
+eza
+zoxide
+jq
+
+# Terminal (in extra since 2025)
+ghostty
+
+# Build deps — not needed by anything installed here, but `mise install ruby`
+# (and similar) will compile from source unless you set ruby.compile=false.
+# Pre-installing them now means later `mise install` Just Works.
+base-devel
+openssl
+readline
+zlib
+libyaml

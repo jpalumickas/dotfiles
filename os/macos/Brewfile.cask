@@ -1,0 +1,13 @@
+# Homebrew casks — GUI apps and fonts.
+# Run via os/macos/install (which calls `brew bundle` on this file too).
+
+# Editors
+cask "cursor"
+cask "visual-studio-code"
+
+# Terminal
+cask "ghostty"
+
+# Fonts
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"

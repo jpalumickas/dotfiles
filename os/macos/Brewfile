@@ -1,0 +1,27 @@
+# Homebrew formulae — CLI tools.
+# Run via os/macos/install (which calls `brew bundle`).
+
+# Shell + prompt
+brew "fish"
+brew "starship"
+
+# Editor + multiplexer
+brew "neovim"
+brew "tmux"
+
+# Version manager
+brew "mise"
+
+# Git
+brew "git"
+brew "gh"
+brew "git-delta"
+
+# Modern CLI replacements
+brew "ripgrep"   # grep
+brew "fd"        # find
+brew "fzf"       # fuzzy finder
+brew "bat"       # cat
+brew "eza"       # ls
+brew "zoxide"    # cd
+brew "jq"        # json

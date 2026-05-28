@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Dispatcher: detect OS and run the right os/<os>/install script.
+# Forwards any remaining args to the per-OS script.
+
+set -euo pipefail
+
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+case "$(uname -s)" in
+    Darwin)
+        target="$DOTFILES/os/macos/install"
+        ;;
+    Linux)
+        if [[ -f /etc/arch-release ]]; then
+            target="$DOTFILES/os/arch/install"
+        elif [[ -f /etc/debian_version ]] || command -v apt-get >/dev/null 2>&1; then
+            target="$DOTFILES/os/ubuntu/install"
+        else
+            echo "unsupported Linux distro — neither Arch nor Debian/Ubuntu detected" >&2
+            exit 1
+        fi
+        ;;
+    *)
+        echo "unsupported OS: $(uname -s)" >&2
+        exit 1
+        ;;
+esac
+
+echo "==> dispatching to $(basename "$(dirname "$target")")"
+exec "$target" "$@"

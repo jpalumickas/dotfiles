@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Arch Linux package install. Official repos only.
+# For AUR-only packages (Cursor, etc.), add manually via paru/yay later.
+
+set -euo pipefail
+
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+echo "==> pacman -Syu (upgrade system)"
+sudo pacman -Syu --noconfirm
+
+echo "==> installing packages from packages.txt"
+packages=()
+while IFS= read -r line; do
+    line="${line%%#*}"
+    line="$(echo -n "$line" | xargs)"
+    [[ -n "$line" ]] && packages+=("$line")
+done < "$HERE/packages.txt"
+sudo pacman -S --needed --noconfirm "${packages[@]}"
+
+# Register fish as a login shell.
+if command -v fish >/dev/null 2>&1; then
+    fish_path="$(command -v fish)"
+    if ! grep -qxF "$fish_path" /etc/shells; then
+        echo "==> adding $fish_path to /etc/shells"
+        echo "$fish_path" | sudo tee -a /etc/shells >/dev/null
+    fi
+fi
+
+echo "==> done"

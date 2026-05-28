@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# macOS package install.
+#   ./install            # installs CLI tools + casks
+#   ./install --no-cask  # skip GUI apps (useful for headless / CI)
+
+set -euo pipefail
+
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+WITH_CASKS=1
+[[ "${1:-}" == "--no-cask" ]] && WITH_CASKS=0
+
+if ! command -v brew >/dev/null 2>&1; then
+    echo "==> installing Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # On Apple Silicon, the freshly-installed brew isn't on PATH yet for this session.
+    [[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+echo "==> brew bundle (CLI)"
+brew bundle --file="$HERE/Brewfile"
+
+if [[ $WITH_CASKS -eq 1 ]]; then
+    echo "==> brew bundle (casks)"
+    brew bundle --file="$HERE/Brewfile.cask"
+fi
+
+# Register fish as a valid login shell so `chsh -s $(which fish)` works.
+if command -v fish >/dev/null 2>&1; then
+    fish_path="$(command -v fish)"
+    if ! grep -qxF "$fish_path" /etc/shells; then
+        echo "==> adding $fish_path to /etc/shells (needs sudo)"
+        echo "$fish_path" | sudo tee -a /etc/shells >/dev/null
+    fi
+fi
+
+echo "==> done"

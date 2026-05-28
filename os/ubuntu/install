@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Ubuntu/Debian package install.
+
+set -euo pipefail
+
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+echo "==> apt update"
+sudo apt-get update
+
+echo "==> installing packages from packages.txt"
+# Strip comments + blanks, feed to apt.
+packages=()
+while IFS= read -r line; do
+    line="${line%%#*}"
+    line="$(echo -n "$line" | xargs)"   # trim whitespace
+    [[ -n "$line" ]] && packages+=("$line")
+done < "$HERE/packages.txt"
+sudo apt-get install -y "${packages[@]}"
+
+# starship — not in apt repos; install the official way.
+if ! command -v starship >/dev/null 2>&1; then
+    echo "==> installing starship"
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
+fi
+
+# mise — not in apt; install via official installer.
+if ! command -v mise >/dev/null 2>&1; then
+    echo "==> installing mise"
+    curl https://mise.run | sh
+fi
+
+# Register fish as a login shell.
+if command -v fish >/dev/null 2>&1; then
+    fish_path="$(command -v fish)"
+    if ! grep -qxF "$fish_path" /etc/shells; then
+        echo "==> adding $fish_path to /etc/shells"
+        echo "$fish_path" | sudo tee -a /etc/shells >/dev/null
+    fi
+fi
+
+echo "==> done"
+echo
+echo "Heads up — Ubuntu binary names differ from upstream:"
+echo "  fd  → fdfind   (alias in fish/fish/functions/fd.fish if you want)"
+echo "  bat → batcat   (same)"
