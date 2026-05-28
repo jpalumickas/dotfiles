@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# Symlink dotfiles into $HOME.
+#
+# Explicit, no auto-discovery. Add a line per file/dir you want linked.
+# Safe to re-run: skips correct links, refuses to overwrite real files.
+
+set -euo pipefail
+
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+link() {
+    local src="$DOTFILES/$1"
+    local dest="$HOME/$2"
+
+    if [[ ! -e "$src" ]]; then
+        echo "skip $2 — source missing: $src"
+        return
+    fi
+
+    mkdir -p "$(dirname "$dest")"
+
+    if [[ -L "$dest" ]]; then
+        if [[ "$(readlink "$dest")" == "$src" ]]; then
+            echo "ok   $2"
+            return
+        fi
+        rm "$dest"
+    elif [[ -e "$dest" ]]; then
+        echo "skip $2 — exists and is not a symlink"
+        return
+    fi
+
+    ln -s "$src" "$dest"
+    echo "link $2 -> $src"
+}
+
+# src (relative to repo)        dest (relative to $HOME)
+link  fish                      .config/fish
+link  ghostty/config            .config/ghostty/config
+link  starship/starship.toml    .config/starship.toml
+link  git/ignore                .config/git/ignore
