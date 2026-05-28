@@ -60,6 +60,8 @@ link  git/ignore                .config/git/ignore
 link  git/config                .config/git/config
 link  git/config.local          .config/git/config.local
 link  mise/config.toml          .config/mise/config.toml
+link  bash/bashrc               .bashrc
+link  bash/bash_profile         .bash_profile
 
 # Cursor + VSCode share the same JSON files; path varies by OS (see above).
 if [[ -n "$CURSOR_USER" ]]; then

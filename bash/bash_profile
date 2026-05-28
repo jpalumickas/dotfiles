@@ -1,0 +1,7 @@
+# ~/.bash_profile — login shell init.
+#
+# Bash rules: login shells read this OR .bash_login OR .profile (first one
+# found). Interactive non-login shells read .bashrc. To get consistent
+# behavior, source .bashrc from here so login shells get the full setup.
+
+[[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
