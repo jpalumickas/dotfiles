@@ -28,23 +28,50 @@ done
 HISTSIZE=10000
 HISTFILESIZE=20000
 HISTCONTROL=ignoreboth         # skip dups and lines starting with space
+HISTTIMEFORMAT="%F %T  "       # timestamps in `history` output
 shopt -s histappend            # append on exit instead of overwriting
+
+# Sync history across concurrent shells: after each command, flush to file
+# and re-read what other shells wrote. Other tools (mise, starship) also
+# hook PROMPT_COMMAND, so prepend rather than overwrite.
+PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND:-}"
 
 # --- Shell behavior -------------------------------------------------------
 shopt -s checkwinsize          # update LINES/COLUMNS after each command
 shopt -s nocaseglob            # case-insensitive glob
 
-# `globstar` (** for recursive glob) is bash 4.0+. macOS ships 3.2.
-# Guard so the 3.2 case doesn't error out at shell startup.
+# bash 4.0+ niceties. macOS ships 3.2, so guard.
 if (( BASH_VERSINFO[0] >= 4 )); then
-    shopt -s globstar
+    shopt -s globstar          # `**` matches recursively
+    shopt -s cdspell           # auto-correct typos in cd paths
+    shopt -s autocd            # `mydir` (no `cd`) cds into it
 fi
+
+# Readline / key bindings.
+# Up/Down with a prefix already typed cycles through matching history
+# (type `git ` then ↑ → walks past git commands). Much more useful than
+# the default plain history walk.
+bind '"\e[A": history-search-backward' 2>/dev/null
+bind '"\e[B": history-search-forward'  2>/dev/null
+
+# Tab cycles through completions instead of just listing them (zsh/fish-style).
+# show-all-if-ambiguous: show the list on the FIRST ambiguous Tab (default
+# requires two). menu-complete-display-prefix: fill the common prefix first,
+# then cycle.
+bind 'set show-all-if-ambiguous on'      2>/dev/null
+bind 'set menu-complete-display-prefix on' 2>/dev/null
+bind 'TAB: menu-complete'                2>/dev/null
+bind '"\e[Z": menu-complete-backward'    2>/dev/null  # Shift-Tab
 
 # --- Aliases --------------------------------------------------------------
 # Cross-shell aliases (also sourced by fish):
 [[ -f "$HOME/.dotfiles/shell/aliases.sh" ]] && source "$HOME/.dotfiles/shell/aliases.sh"
 # Bash-only aliases (ls family, etc.):
 [[ -f "$HOME/.dotfiles/bash/aliases.sh" ]]  && source "$HOME/.dotfiles/bash/aliases.sh"
+
+# --- bash-completion ------------------------------------------------------
+# Tab-complete subcommands and flags for git, docker, gh, npm, etc.
+[[ -f "$HOME/.dotfiles/bash/completion.sh" ]] && source "$HOME/.dotfiles/bash/completion.sh"
 
 # --- Tool integrations ----------------------------------------------------
 # All guarded so missing tools don't error out the shell.

@@ -4,6 +4,8 @@
 # Shell + prompt
 brew "fish"
 brew "starship"
+brew "bash"                  # modern bash 5+, replaces macOS's bash 3.2
+brew "bash-completion@2"     # tab completion for git/docker/gh/npm/…
 
 # Editor + multiplexer
 brew "neovim"

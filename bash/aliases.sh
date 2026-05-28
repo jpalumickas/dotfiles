@@ -1,6 +1,19 @@
 # Bash-only aliases. Cross-shell (bash + fish) aliases live in
 # ~/.dotfiles/shell/aliases.sh; this file is for bash-specific tweaks.
 
+# cd shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Always-on flags
+alias mkdir='mkdir -p'
+alias df='df -h'
+alias du='du -h'
+
+# Print PATH one entry per line
+alias path='echo -e "${PATH//:/\n}"'
+
 # ls family — prefer eza (modern Rust replacement), then exa (its
 # unmaintained predecessor), then plain ls. Each branch keeps the same
 # user-facing aliases so muscle memory works regardless of what's installed.
