@@ -8,6 +8,8 @@
 
 # Shell + multiplexer
 fish
+zsh                # bash is preinstalled and already modern (5.x)
+bash-completion    # provides v2 on modern Ubuntu
 tmux
 
 # Editor
