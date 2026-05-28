@@ -55,14 +55,11 @@
     "**/.wrangler": true,
     "**/yarn-error*.log": true
   },
-  "json.schemas": [],
   "redhat.telemetry.enabled": false,
   "vim.textwidth": 99999,
-  "npm.keybindingsChangedWarningShown": true,
   "files.associations": {
     ".env-staging": "env"
   },
-  "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
   "workbench.tree.indent": 18,
   "tailwindCSS.experimental.classRegex": [
@@ -72,10 +69,7 @@
     ]
   ],
   "prettier.requireConfig": true,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "react-native-tools.showUserTips": false,
   "prisma.showPrismaDataPlatformNotification": false,
   "github.copilot.editor.enableAutoCompletions": true,
   "i18n-ally.displayLanguage": "lt",
@@ -84,7 +78,6 @@
   "git.openRepositoryInParentFolders": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "RadonIDE.enableRadonAI": false,
-  "window.autoDetectColorScheme": false,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -120,14 +113,5 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[dockercompose]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
   }
 }
