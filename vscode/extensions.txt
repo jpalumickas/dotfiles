@@ -1,0 +1,36 @@
+# JS
+oxc.oxc-vscode
+vitest.explorer
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+swmansion.react-native-ide
+expo.vscode-expo-tools
+msjsdiag.vscode-react-native
+
+# Ruby
+shopify.ruby-lsp
+# misogi.ruby-rubocop
+
+# Themes
+snazzytheme.snazzy-vscode
+# dracula-theme.theme-dracula
+robbowen.synthwave-vscode
+
+# Syntax
+redhat.vscode-yaml
+tamasfe.even-better-toml
+matthewpi.caddyfile-support
+bradlc.vscode-tailwindcss
+davidanson.vscode-markdownlint
+ms-azuretools.vscode-docker
+prisma.prisma
+
+# Utils
+irongeek.vscode-env
+sleistner.vscode-fileutils
+usernamehw.errorlens
+vscodevim.vim
+eamodio.gitlens
+lokalise.i18n-ally
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-lithuanian
