@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# Interactive setup for ~/.config/git/config.local — the per-machine,
+# gitignored part of your git config (identity + credential helper).
+#
+# Re-runnable: existing values are shown as defaults; press Enter to keep.
+
+set -euo pipefail
+
+CONFIG="$HOME/.config/git/config.local"
+
+# Read a key from the local config, empty string if file or key missing.
+current() {
+    [[ -f "$CONFIG" ]] || { echo ""; return; }
+    git config --file "$CONFIG" --get "$1" 2>/dev/null || echo ""
+}
+
+# Prompt with a default; Enter keeps the default.
+ask() {
+    local label="$1" default="$2" value
+    if [[ -n "$default" ]]; then
+        read -r -p "$label [$default]: " value
+    else
+        read -r -p "$label: " value
+    fi
+    echo "${value:-$default}"
+}
+
+# Pick a credential helper appropriate for this OS. Empty = leave unset.
+detect_helper() {
+    case "$(uname -s)" in
+        Darwin)
+            echo "osxkeychain"
+            ;;
+        Linux)
+            if command -v git-credential-libsecret >/dev/null 2>&1; then
+                echo "libsecret"
+            elif [[ -x /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret ]]; then
+                echo "/usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret"
+            else
+                echo "cache --timeout=3600"
+            fi
+            ;;
+        *)
+            echo ""
+            ;;
+    esac
+}
+
+name="$(ask 'Name'  "$(current user.name)")"
+email="$(ask 'Email' "$(current user.email)")"
+helper="$(ask 'Credential helper' "$(current credential.helper)")"
+[[ -z "$helper" ]] && helper="$(detect_helper)"
+
+mkdir -p "$(dirname "$CONFIG")"
+
+# `git config --file` follows symlinks and only updates the listed keys,
+# preserving anything else already in the file.
+git config --file "$CONFIG" user.name  "$name"
+git config --file "$CONFIG" user.email "$email"
+[[ -n "$helper" ]] && git config --file "$CONFIG" credential.helper "$helper"
+
+echo
+echo "wrote $CONFIG:"
+git config --file "$CONFIG" --list | sed 's/^/  /'
