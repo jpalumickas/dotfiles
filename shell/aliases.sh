@@ -14,3 +14,13 @@ alias yui='yarn upgrade-interactive --latest'
 alias yupg='yarn upgrade'
 
 alias pnui='pnpm upgrade --interactive --latest'
+
+# Utils
+alias week='date +%V'
+
+# Recursively delete `.DS_Store` files
+alias cleanup-ds-store="find . -type f -name '*.DS_Store' -ls -delete"
+
+alias rrfinder="killall -KILL Finder"
+alias rrdock="killall -KILL Dock" # launchctl stop com.apple.Dock.agent
+alias rrmenubar="killall -KILL SystemUIServer"
