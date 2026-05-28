@@ -5,11 +5,9 @@ dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 swmansion.react-native-ide
 expo.vscode-expo-tools
-msjsdiag.vscode-react-native
 
 # Ruby
 shopify.ruby-lsp
-# misogi.ruby-rubocop
 
 # Themes
 snazzytheme.snazzy-vscode
@@ -22,7 +20,6 @@ tamasfe.even-better-toml
 matthewpi.caddyfile-support
 bradlc.vscode-tailwindcss
 davidanson.vscode-markdownlint
-ms-azuretools.vscode-docker
 prisma.prisma
 
 # Utils

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Install every extension listed in vscode/extensions.txt into whichever of
+# `code` and `cursor` are present. Re-runnable: `--force` makes the CLIs
+# upgrade if already installed.
+#
+# To refresh the list from your current setup:
+#   cursor --list-extensions > ~/.dotfiles/vscode/extensions.txt
+#   # or `code --list-extensions > ...`
+
+set -euo pipefail
+
+FILE="$HOME/.dotfiles/vscode/extensions.txt"
+[[ -f "$FILE" ]] || { echo "no extensions list at $FILE"; exit 1; }
+
+install_for() {
+    local cli="$1"
+    command -v "$cli" >/dev/null 2>&1 || { echo "skip $cli (not installed)"; return; }
+    echo "==> $cli"
+    while IFS= read -r ext; do
+        [[ -z "$ext" || "$ext" == \#* ]] && continue
+        "$cli" --install-extension "$ext" --force
+    done < "$FILE"
+}
+
+install_for code
+install_for cursor
