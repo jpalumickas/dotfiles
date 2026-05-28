@@ -40,8 +40,11 @@ if (( BASH_VERSINFO[0] >= 4 )); then
     shopt -s globstar
 fi
 
-# --- Shared aliases (same file fish reads) --------------------------------
+# --- Aliases --------------------------------------------------------------
+# Cross-shell aliases (also sourced by fish):
 [[ -f "$HOME/.dotfiles/shell/aliases.sh" ]] && source "$HOME/.dotfiles/shell/aliases.sh"
+# Bash-only aliases (ls family, etc.):
+[[ -f "$HOME/.dotfiles/bash/aliases.sh" ]]  && source "$HOME/.dotfiles/bash/aliases.sh"
 
 # --- Tool integrations ----------------------------------------------------
 # All guarded so missing tools don't error out the shell.
