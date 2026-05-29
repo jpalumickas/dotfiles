@@ -63,11 +63,20 @@ bind 'set menu-complete-display-prefix on' 2>/dev/null
 bind 'TAB: menu-complete'                2>/dev/null
 bind '"\e[Z": menu-complete-backward'    2>/dev/null  # Shift-Tab
 
-# --- Aliases --------------------------------------------------------------
+# --- Aliases + functions --------------------------------------------------
 # Cross-shell aliases (also sourced by fish):
 [[ -f "$HOME/.dotfiles/shell/aliases.sh" ]] && source "$HOME/.dotfiles/shell/aliases.sh"
 # Bash-only aliases (ls family, etc.):
 [[ -f "$HOME/.dotfiles/bash/aliases.sh" ]]  && source "$HOME/.dotfiles/bash/aliases.sh"
+# Bash functions, one per file under bash/functions/ (mirrors fish layout).
+# Unlike fish these aren't lazy-loaded — bash has no on-demand mechanism — so
+# everything is sourced at shell start.
+if [[ -d "$HOME/.dotfiles/bash/functions" ]]; then
+    for fn in "$HOME/.dotfiles/bash/functions"/*.sh; do
+        [[ -r "$fn" ]] && source "$fn"
+    done
+    unset fn
+fi
 
 # --- bash-completion ------------------------------------------------------
 # Tab-complete subcommands and flags for git, docker, gh, npm, etc.

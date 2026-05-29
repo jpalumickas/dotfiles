@@ -7,3 +7,8 @@ idiomatic_version_file_enable_tools = ["ruby"]
 
 [settings.ruby]
 compile = false
+
+[settings.node]
+# Run `corepack enable` after Node installs, so pnpm/yarn shims are wired up
+# without an extra step. Lets `packageManager` in package.json take effect.
+corepack = true
