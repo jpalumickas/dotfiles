@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+# One-shot fresh-machine bootstrap.
+#
+# Orchestrates the focused scripts in order:
+#   1. install-dependencies → OS packages (brew / apt / pacman)
+#   2. symlink              → wire ~/.dotfiles/* into $HOME
+#   3. setup-git            → interactive name/email/credential helper
+#   4. vscode extensions    → install from vscode/extensions.txt
+#   5. nvim                 → headless `Lazy! sync` so plugins land before first launch
+#
+# Idempotent: every step is safe to re-run.
+#
+#   ./bootstrap                # run everything
+#   ./bootstrap --skip-pkgs    # skip OS package install (already done)
+#   ./bootstrap --skip-git     # skip interactive git config
+#   ./bootstrap --skip-ext     # skip vscode/cursor extensions
+#   ./bootstrap --skip-nvim    # skip headless Lazy sync
+
+set -euo pipefail
+
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+SKIP_PKGS=0
+SKIP_GIT=0
+SKIP_EXT=0
+SKIP_NVIM=0
+
+for arg in "$@"; do
+    case "$arg" in
+        --skip-pkgs)  SKIP_PKGS=1 ;;
+        --skip-git)   SKIP_GIT=1 ;;
+        --skip-ext)   SKIP_EXT=1 ;;
+        --skip-nvim)  SKIP_NVIM=1 ;;
+        -h|--help)
+            sed -n '2,/^$/p' "$0" | sed 's/^# \{0,1\}//'
+            exit 0
+            ;;
+        *)
+            echo "unknown flag: $arg" >&2
+            exit 1
+            ;;
+    esac
+done
+
+step() { printf "\n\033[34m==> %s\033[0m\n" "$*"; }
+
+# 1. OS packages
+if [[ $SKIP_PKGS -eq 0 ]]; then
+    step "OS packages"
+    "$DOTFILES/scripts/install-dependencies"
+else
+    step "OS packages (skipped)"
+fi
+
+# 2. Symlinks — fast and idempotent, always run.
+step "Symlinks"
+"$DOTFILES/scripts/symlink"
+
+# 3. Git identity — interactive. Skippable for CI / non-tty runs.
+if [[ $SKIP_GIT -eq 0 ]]; then
+    step "Git identity"
+    "$DOTFILES/scripts/setup-git"
+else
+    step "Git identity (skipped)"
+fi
+
+# 4. VSCode/Cursor extensions — slow but idempotent (uses --force).
+if [[ $SKIP_EXT -eq 0 ]]; then
+    if command -v code >/dev/null 2>&1 || command -v cursor >/dev/null 2>&1; then
+        step "VSCode/Cursor extensions"
+        "$DOTFILES/vscode/scripts/install-vscode-extensions"
+    else
+        step "VSCode/Cursor extensions (no editor on PATH — skipped)"
+    fi
+fi
+
+# 5. Neovim — bootstrap LazyVim plugins headlessly so first launch is fast.
+if [[ $SKIP_NVIM -eq 0 ]]; then
+    if command -v nvim >/dev/null 2>&1; then
+        step "Neovim plugins (Lazy! sync)"
+        nvim --headless "+Lazy! sync" +qa
+    else
+        step "Neovim plugins (nvim not on PATH — skipped)"
+    fi
+fi
+
+printf "\n\033[32m✓ bootstrap done\033[0m\n"
+printf "\nNext: open a fresh shell (or \`exec fish\`) to pick up the new config.\n"

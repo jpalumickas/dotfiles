@@ -10,6 +10,7 @@ brew "zsh"                   # macOS ships zsh 5.9; brew keeps it fresh
 
 # Editor + multiplexer
 brew "neovim"
+brew "tree-sitter"           # required by nvim-treesitter's `main` branch
 brew "tmux"
 
 # Version manager
@@ -19,6 +20,7 @@ brew "mise"
 brew "git"
 brew "gh"
 brew "git-delta"
+brew "lazygit"               # LazyVim's <leader>gg UI
 
 # Modern CLI replacements
 brew "ripgrep"   # grep

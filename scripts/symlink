@@ -60,6 +60,7 @@ link  git/ignore                .config/git/ignore
 link  git/config                .config/git/config
 link  git/config.local          .config/git/config.local
 link  mise/config.toml          .config/mise/config.toml
+link  nvim                      .config/nvim
 link  bash/bashrc               .bashrc
 link  bash/bash_profile         .bash_profile
 

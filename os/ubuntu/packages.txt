@@ -19,6 +19,7 @@ neovim
 git
 gh
 git-delta
+lazygit            # LazyVim's <leader>gg UI; in universe since 24.04
 
 # Modern CLI replacements
 ripgrep
@@ -28,6 +29,7 @@ bat        # binary: batcat
 eza
 zoxide
 jq
+unzip      # needed by the nerd-font install step in `install`
 
 # Build deps — not needed by anything installed here, but `mise install ruby`
 # (and similar) will compile from source unless you set ruby.compile=false.

@@ -8,6 +8,11 @@ alias gca='git commit -a -v'
 alias gco='git checkout'
 alias gb='git branch'
 
+# Editor
+alias vim='nvim'
+alias vi='nvim'
+alias ovim='command vim'   # original vim, bypasses the alias above
+
 # JS
 alias yi='yarn install'
 alias yui='yarn upgrade-interactive --latest'

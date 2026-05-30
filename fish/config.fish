@@ -5,15 +5,10 @@
 if status is-interactive
     # Suppress the default greeting; Starship handles the prompt.
     set -g fish_greeting
-
-    # Homebrew prefix differs on Apple Silicon vs Intel; pick whichever exists.
-    for brew_prefix in /opt/homebrew /usr/local
-        if test -x $brew_prefix/bin/brew
-            eval ($brew_prefix/bin/brew shellenv | string collect)
-            break
-        end
-    end
 end
+
+# Brew shellenv was here, but moved to conf.d/00-paths.fish so it runs
+# before conf.d/10-interactive.fish needs `starship`, `zoxide`, etc.
 
 # Sensible PATH additions — kept here so they apply to non-interactive shells too
 # (scripts, editor terminals, etc.).

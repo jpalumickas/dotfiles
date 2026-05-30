@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Neovim plugin install.
+if [[ $SKIP_NVIM -eq 0 ]]; then
+    if command -v nvim >/dev/null 2>&1; then
+        step "Neovim plugins (Lazy! sync)"
+        nvim --headless "+Lazy! sync" +qa
+    else
+        step "Neovim plugins (nvim not on PATH — skipped)"
+    fi
+fi

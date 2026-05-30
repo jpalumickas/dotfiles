@@ -10,6 +10,7 @@ tmux
 
 # Editor
 neovim
+tree-sitter-cli   # required by nvim-treesitter's `main` branch
 
 # Prompt + runtime manager
 starship
@@ -19,6 +20,10 @@ mise
 git
 github-cli      # provides `gh`
 git-delta
+lazygit         # LazyVim's <leader>gg UI
+
+# Fonts (Nerd Font for LazyVim icons, Ghostty, etc.)
+ttf-jetbrains-mono-nerd
 
 # Modern CLI replacements
 ripgrep
