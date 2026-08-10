@@ -35,20 +35,26 @@ link() {
 }
 
 # VSCode/Cursor store user config in different places on macOS vs Linux.
+# lazygit is the same story: it only honours XDG when XDG_CONFIG_HOME is set,
+# which we don't — so on macOS it reads Library/Application Support instead.
+# Verify with `lazygit --print-config-dir` if this ever stops working.
 # Everything else (fish, ghostty, starship, git, mise) is XDG and identical.
 case "$(uname -s)" in
     Darwin)
         VSCODE_USER="Library/Application Support/Code/User"
         CURSOR_USER="Library/Application Support/Cursor/User"
+        LAZYGIT_CONFIG="Library/Application Support/lazygit/config.yml"
         ;;
     Linux)
         VSCODE_USER=".config/Code/User"
         CURSOR_USER=".config/Cursor/User"
+        LAZYGIT_CONFIG=".config/lazygit/config.yml"
         ;;
     *)
-        echo "warn: unknown OS $(uname -s) — skipping VSCode/Cursor links"
+        echo "warn: unknown OS $(uname -s) — skipping VSCode/Cursor/lazygit links"
         VSCODE_USER=""
         CURSOR_USER=""
+        LAZYGIT_CONFIG=""
         ;;
 esac
 
@@ -64,6 +70,10 @@ link  herdr/config.toml         .config/herdr/config.toml
 link  nvim                      .config/nvim
 link  bash/bashrc               .bashrc
 link  bash/bash_profile         .bash_profile
+
+if [[ -n "$LAZYGIT_CONFIG" ]]; then
+    link  lazygit/config.yml        "$LAZYGIT_CONFIG"
+fi
 
 # Cursor + VSCode share the same JSON files; path varies by OS (see above).
 if [[ -n "$CURSOR_USER" ]]; then

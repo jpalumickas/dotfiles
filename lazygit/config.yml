@@ -1,0 +1,20 @@
+# lazygit — https://github.com/jesseduffield/lazygit
+#
+# lazygit has no syntax highlighter of its own; its diff view only colors
+# added/removed lines. Delegating to delta gives language-aware highlighting
+# (TOML, Lua, fish, …) in the diff panel.
+#
+# NOTE: this uses git.diffRenderers, the modern form (lazygit 0.55+). The older
+# git.paging.pager still "works", but lazygit silently migrates it and writes
+# the result back to the config file — which, since this file is symlinked from
+# the dotfiles repo, would rewrite the tracked file and dirty the worktree.
+# See docs/Custom_DiffRenderers.md.
+
+git:
+  diffRenderers:
+    # type defaults to 'stdinFilter' — lazygit pipes `git diff --color=always`
+    # into the command. --paging=never is required: delta must not page inside lazygit.
+    # Syntax theme matches nvim's catppuccin-mocha; ships with bat/delta, no install.
+    - name: delta
+      colorArg: always
+      command: "delta --dark --paging=never --syntax-theme='Catppuccin Mocha'"
