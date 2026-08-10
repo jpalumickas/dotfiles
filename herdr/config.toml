@@ -1,0 +1,23 @@
+onboarding = false
+# Herdr — terminal workspace manager for AI coding agents.
+# See `herdr --default-config` for every available option and its default.
+
+[terminal]
+# Explicit shell rather than relying on $SHELL. The herdr *server* is a
+# long-lived process; it inherits $SHELL from whatever launched it, which
+# may be zsh even after `chsh -s $(which fish)`. Naming fish directly means
+# new panes get fish regardless of how the server was started.
+default_shell = "/opt/homebrew/bin/fish"
+
+# "auto" uses login shells on macOS, so fish reads config.fish / conf.d.
+shell_mode = "auto"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+[ui.toast]
+delivery = "herdr"
+
+[theme]
+name = "catppuccin"
+auto_switch = false
