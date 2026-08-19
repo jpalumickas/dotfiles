@@ -11,12 +11,16 @@ case "$(uname -s)" in
         target="$DOTFILES/os/macos/install"
         ;;
     Linux)
-        if [[ -f /etc/arch-release ]]; then
+        # Omarchy is Arch underneath, so check it first.
+        if [[ -f /etc/omarchy-release ]] || [[ -d "$HOME/.local/share/omarchy" ]] ||
+           command -v omarchy-update >/dev/null 2>&1; then
+            target="$DOTFILES/os/omarchy/install"
+        elif [[ -f /etc/arch-release ]]; then
             target="$DOTFILES/os/arch/install"
         elif [[ -f /etc/debian_version ]] || command -v apt-get >/dev/null 2>&1; then
             target="$DOTFILES/os/ubuntu/install"
         else
-            echo "unsupported Linux distro — neither Arch nor Debian/Ubuntu detected" >&2
+            echo "unsupported Linux distro — neither Omarchy/Arch nor Debian/Ubuntu detected" >&2
             exit 1
         fi
         ;;

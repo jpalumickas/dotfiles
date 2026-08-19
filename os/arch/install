@@ -6,8 +6,10 @@ set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "==> pacman -Syu (upgrade system)"
-sudo pacman -Syu --noconfirm
+echo "==> pacman -Sy (refresh package databases)"
+# Deliberately not -Syu: installing dotfile packages shouldn't drag in a full
+# system upgrade. Run `sudo pacman -Syu` yourself when you actually want one.
+sudo pacman -Sy --noconfirm
 
 echo "==> installing packages from packages.txt"
 packages=()

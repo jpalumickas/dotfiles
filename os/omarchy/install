@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# Omarchy (Arch-based) package install.
+#
+# Omarchy owns system updates itself — `omarchy-update` runs its migrations and
+# then the underlying `pacman -Syu`. So we call that instead of touching pacman
+# databases directly, and only add the packages Omarchy doesn't already ship.
+#
+#   ./install              # omarchy-update, then packages
+#   ./install --no-update  # skip omarchy-update, just install packages
+
+set -euo pipefail
+
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+DO_UPDATE=1
+[[ "${1:-}" == "--no-update" ]] && DO_UPDATE=0
+
+# omarchy-update lives in ~/.local/share/omarchy/bin, which is on PATH for
+# interactive shells but not necessarily here.
+omarchy_update="$(command -v omarchy-update || true)"
+[[ -z "$omarchy_update" && -x "$HOME/.local/share/omarchy/bin/omarchy-update" ]] &&
+    omarchy_update="$HOME/.local/share/omarchy/bin/omarchy-update"
+
+if [[ $DO_UPDATE -eq 1 ]]; then
+    if [[ -n "$omarchy_update" ]]; then
+        echo "==> omarchy-update"
+        "$omarchy_update"
+    else
+        echo "warn: omarchy-update not found — skipping system update" >&2
+    fi
+else
+    echo "==> omarchy-update (skipped)"
+fi
+
+# Shared with os/arch — same repos, same package names. --needed makes the
+# overlap with what Omarchy preinstalls a no-op.
+echo "==> installing packages from arch/packages.txt"
+packages=()
+while IFS= read -r line; do
+    line="${line%%#*}"
+    line="$(echo -n "$line" | xargs)"
+    [[ -n "$line" ]] && packages+=("$line")
+done < "$HERE/../arch/packages.txt"
+sudo pacman -S --needed --noconfirm "${packages[@]}"
+
+# Register fish as a login shell.
+if command -v fish >/dev/null 2>&1; then
+    fish_path="$(command -v fish)"
+    if ! grep -qxF "$fish_path" /etc/shells; then
+        echo "==> adding $fish_path to /etc/shells"
+        echo "$fish_path" | sudo tee -a /etc/shells >/dev/null
+    fi
+fi
+
+echo "==> done"
