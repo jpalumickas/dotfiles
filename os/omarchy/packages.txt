@@ -1,2 +1,4 @@
 # Packages not included with Omarchy.
 fish
+git-delta
+git-lfs

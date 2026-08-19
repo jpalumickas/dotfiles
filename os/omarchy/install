@@ -28,6 +28,13 @@ fi
 echo "==> removing unwanted Omarchy web apps"
 "$HERE/remove-webapps"
 
+# Use the installed Fastmail Flatpak for mailto links and `xdg-email`.
+if command -v flatpak >/dev/null 2>&1 &&
+   flatpak info com.fastmail.Fastmail >/dev/null 2>&1; then
+    echo "==> setting Fastmail as the default email app"
+    xdg-mime default com.fastmail.Fastmail.desktop x-scheme-handler/mailto
+fi
+
 echo "==> installing packages from omarchy/packages.txt"
 packages=()
 while IFS= read -r line; do
@@ -46,7 +53,7 @@ else
     sudo pacman -S --needed --noconfirm "${packages[@]}"
 fi
 
-# Register fish as a login shell.
+# Register Fish as an allowed shell without replacing Omarchy's default Bash.
 if command -v fish >/dev/null 2>&1; then
     fish_path="$(command -v fish)"
     if ! grep -qxF "$fish_path" /etc/shells; then

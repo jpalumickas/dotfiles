@@ -35,3 +35,16 @@
 -- "Music" runs `omarchy-launch-spotify`, which pops the Spotify installer when
 -- Spotify isn't present. Drop it rather than get nagged.
 hl.unbind("SUPER + SHIFT + M")
+
+-- Replace the preinstalled HEY shortcuts with the Fastmail desktop app.
+hl.unbind("SUPER + SHIFT + E")
+o.bind("SUPER + SHIFT + E", "Email", {
+  launch = "gtk-launch com.fastmail.Fastmail",
+  focus = "com-fastmail-fastmail",
+})
+
+hl.unbind("SUPER + SHIFT + ALT + E")
+o.bind("SUPER + SHIFT + ALT + E", "New email", "xdg-email")
+
+-- Google Photos is removed from the preinstalled web apps as well.
+hl.unbind("SUPER + SHIFT + P")
