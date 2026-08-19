@@ -25,6 +25,9 @@ else
     echo "==> omarchy-update (skipped)"
 fi
 
+echo "==> removing unwanted Omarchy web apps"
+"$HERE/remove-webapps"
+
 echo "==> installing packages from omarchy/packages.txt"
 packages=()
 while IFS= read -r line; do

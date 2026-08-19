@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+webapps=(
+    "Basecamp"
+    "HEY"
+    "Google Contacts"
+    "Google Photos"
+)
+
+desktop_dir="$HOME/.local/share/applications"
+
+if ! command -v omarchy-webapp-remove >/dev/null 2>&1; then
+    echo "warn: omarchy-webapp-remove not found — skipping web-app cleanup" >&2
+    exit 0
+fi
+
+for app in "${webapps[@]}"; do
+    if [[ -f "$desktop_dir/$app.desktop" ]]; then
+        echo "==> removing Omarchy web app: $app"
+        OMARCHY_REMOVE_NOTIFY=false omarchy-webapp-remove "$app"
+    fi
+done
