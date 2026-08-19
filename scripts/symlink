@@ -71,6 +71,13 @@ link  nvim                      .config/nvim
 link  bash/bashrc               .bashrc
 link  bash/bash_profile         .bash_profile
 
+# Omarchy-only config. Same detection as scripts/install-dependencies.
+if [[ -f /etc/omarchy-release ]] || [[ -d "$HOME/.local/share/omarchy" ]] ||
+   command -v omarchy-update >/dev/null 2>&1; then
+    link  omarchy/hypr/bindings.lua  .config/hypr/bindings.lua
+    link  omarchy/omarchy/extensions/omarchy-menu.jsonc .config/omarchy/extensions/omarchy-menu.jsonc
+fi
+
 if [[ -n "$LAZYGIT_CONFIG" ]]; then
     link  lazygit/config.yml        "$LAZYGIT_CONFIG"
 fi

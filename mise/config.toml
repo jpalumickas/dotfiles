@@ -2,6 +2,10 @@
 ruby = "4.0"
 node = "26"
 
+# AI coding agents.
+claude = "latest"
+codex = "latest"
+
 # Global CLI tools installed via npm and managed by mise.
 # Available on every OS without per-OS package list divergence.
 "npm:oxlint" = "latest"
