@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-# Omarchy (Arch-based) package install.
-#
-# Omarchy owns system updates itself — `omarchy-update` runs its migrations and
-# then the underlying `pacman -Syu`. So we call that instead of touching pacman
-# databases directly, and only add the packages Omarchy doesn't already ship.
+# Update Omarchy and install the extra packages in packages.txt.
 #
 #   ./install              # omarchy-update, then packages
 #   ./install --no-update  # skip omarchy-update, just install packages
@@ -15,16 +11,13 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DO_UPDATE=1
 [[ "${1:-}" == "--no-update" ]] && DO_UPDATE=0
 
-# omarchy-update lives in ~/.local/share/omarchy/bin, which is on PATH for
-# interactive shells but not necessarily here.
-omarchy_update="$(command -v omarchy-update || true)"
-[[ -z "$omarchy_update" && -x "$HOME/.local/share/omarchy/bin/omarchy-update" ]] &&
-    omarchy_update="$HOME/.local/share/omarchy/bin/omarchy-update"
+# Omarchy's bin directory may be absent from non-interactive shells.
+PATH="$HOME/.local/share/omarchy/bin:$PATH"
 
 if [[ $DO_UPDATE -eq 1 ]]; then
-    if [[ -n "$omarchy_update" ]]; then
+    if command -v omarchy-update >/dev/null 2>&1; then
         echo "==> omarchy-update"
-        "$omarchy_update"
+        omarchy-update
     else
         echo "warn: omarchy-update not found — skipping system update" >&2
     fi
@@ -32,16 +25,23 @@ else
     echo "==> omarchy-update (skipped)"
 fi
 
-# Shared with os/arch — same repos, same package names. --needed makes the
-# overlap with what Omarchy preinstalls a no-op.
-echo "==> installing packages from arch/packages.txt"
+echo "==> installing packages from omarchy/packages.txt"
 packages=()
 while IFS= read -r line; do
     line="${line%%#*}"
     line="$(echo -n "$line" | xargs)"
     [[ -n "$line" ]] && packages+=("$line")
-done < "$HERE/../arch/packages.txt"
-sudo pacman -S --needed --noconfirm "${packages[@]}"
+done < "$HERE/packages.txt"
+
+if [[ ${#packages[@]} -eq 0 ]]; then
+    echo "==> nothing to install"
+elif command -v omarchy-pkg-add >/dev/null 2>&1; then
+    echo "==> omarchy-pkg-add ${packages[*]}"
+    omarchy-pkg-add "${packages[@]}"
+else
+    echo "warn: omarchy-pkg-add not found — falling back to pacman" >&2
+    sudo pacman -S --needed --noconfirm "${packages[@]}"
+fi
 
 # Register fish as a login shell.
 if command -v fish >/dev/null 2>&1; then

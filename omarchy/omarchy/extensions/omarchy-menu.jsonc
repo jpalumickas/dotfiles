@@ -30,7 +30,9 @@
 
   // --- Personal overrides ---
 
-  // Drop "Install → Service → Spotify". `when` is a shell condition and the
-  // row is hidden when it fails, so `false` hides it for good.
+  // Hide unwanted "Install → Service" entries.
   "install.service.spotify": {"when": "false"},
+  "install.service.nordvpn": {"when": "false"},
+  "install.service.once": {"when": "false"},
+  "install.service.bitwarden": {"when": "false"},
 }

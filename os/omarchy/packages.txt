@@ -1,0 +1,2 @@
+# Packages not included with Omarchy.
+fish
